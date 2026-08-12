@@ -1,0 +1,14 @@
+/* ===== Option C — « Nocturne royale » : sombre, dramatique, contraste fort ===== */
+:root{
+  --bg:#232309; --surface:#2E2E0E; --alt:#1B1B05;
+  --text:#F3EDD6; --text-2:#D9D0A8; --accent:#E4BE58; --gold-line:#B7923B;
+  --line:rgba(243,237,214,.16);
+  --hero-img:url('/assets/img/chateau-aerial.jpg'); --hero-pos:center 46%;
+  --hero-veil:linear-gradient(180deg,rgba(8,8,2,.55) 0%,rgba(8,8,2,.3) 34%,rgba(8,8,2,.5) 58%,rgba(5,5,1,.9) 100%);
+  --show-img:url('/assets/img/chateau-engraving.jpg'); --show-pos:center 46%;
+  --foot-bg:#151505; --foot-text:#EFE7CF;
+}
+/* la gravure comme une planche encadrée d'or */
+.showcase-img{height:min(60vh,560px);margin:0 clamp(16px,4vw,48px);border:1px solid var(--gold-line);}
+.cta-btn{background:var(--accent);border-color:var(--accent);color:#23230A;}
+.cta-btn:hover,.cta-btn:focus-visible{background:transparent;color:var(--accent);}

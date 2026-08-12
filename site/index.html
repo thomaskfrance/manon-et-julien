@@ -3,335 +3,118 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manon &amp; Julien — 24 octobre 2026</title>
-<meta name="description" content="Manon & Julien se marient le 24 octobre 2026 à Amboise, au Château de La Bourdaisière. Programme, accès, hébergement et informations pratiques.">
-<link rel="stylesheet" href="/assets/css/base.css">
+<title>Manon &amp; Julien — Propositions de site</title>
+<meta name="description" content="Répertoire des propositions de site pour le mariage de Manon et Julien, le 24 octobre 2026.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/assets/css/prop-common.css">
 <style>
-/* ============ base page ============ */
-html{font-size:18px;}
-body{font-size:1.13rem;line-height:1.66;}
-.wrap{width:min(800px,100%);margin:0 auto;padding:0 24px;}
-section{scroll-margin-top:70px;}
+body{background:var(--bg);}
+.masthead{text-align:center;padding:clamp(48px,8vw,86px) 24px clamp(20px,3vw,32px);}
+.masthead .mono{width:70px;height:auto;margin:0 auto 18px;}
+.masthead .eyebrow{margin-bottom:.5rem;}
+.masthead h1{font-family:var(--script);font-weight:400;color:var(--text);font-size:clamp(3rem,9vw,5rem);line-height:.95;margin:.1em 0 0;}
+.masthead .sub{max-width:52ch;margin:14px auto 0;color:var(--text);font-size:1.08rem;}
+.masthead .date{margin:10px auto 0;color:var(--text-2);letter-spacing:.28em;text-transform:uppercase;font-size:.8rem;}
 
-/* ============ nav ============ */
-.topnav{position:sticky;top:0;z-index:40;background:rgba(254,238,225,.94);
-  backdrop-filter:blur(8px);border-bottom:1px solid rgba(78,77,27,.14);}
-.topnav .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;
-  width:min(1080px,100%);margin:0 auto;padding:11px 22px;position:relative;}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--olive);}
-.brand .mono{width:28px;height:auto;}
-.brand b{font-weight:500;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;}
-.nav-links{display:flex;gap:4px;align-items:center;}
-.nav-links a{text-decoration:none;color:var(--olive-2);font-size:.78rem;letter-spacing:.13em;
-  text-transform:uppercase;padding:8px 12px;transition:color .2s;}
-.nav-links a:hover{color:var(--olive);}
-.burger{display:none;background:none;border:1px solid rgba(78,77,27,.35);color:var(--olive);
-  width:40px;height:34px;border-radius:3px;font-size:1.1rem;line-height:1;cursor:pointer;padding:0;}
-@media(max-width:760px){
-  .nav-links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;
-    background:var(--beige);border-bottom:1px solid rgba(78,77,27,.18);max-height:0;overflow:hidden;transition:max-height .3s ease;}
-  .nav-links.open{max-height:340px;}
-  .nav-links a{padding:15px 22px;border-top:1px solid rgba(78,77,27,.1);}
-  .burger{display:block;}
-}
+.group{width:min(1080px,100%);margin:0 auto;padding:clamp(26px,4vw,44px) 24px;}
+.group > h2{display:flex;align-items:center;gap:14px;font-weight:600;font-size:1.15rem;color:var(--text);
+  text-transform:uppercase;letter-spacing:.18em;margin:0 0 22px;}
+.group > h2::after{content:"";flex:1;height:1px;background:var(--line);}
 
-/* ============ hero (mobile-first : immersif plein ecran) ============ */
-.hero{position:relative;min-height:calc(100vh - 56px);overflow:hidden;}
-.hero-media{position:absolute;inset:0;background:url('/assets/img/couple-hero.jpg') center 56%/cover no-repeat;}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,42,14,.25) 0%,rgba(43,42,14,0) 30%,rgba(43,42,14,.2) 56%,rgba(38,37,12,.85) 100%);}
-.hero-panel{position:absolute;left:0;right:0;bottom:0;padding:0 24px 12vh;text-align:center;color:#FBF4E4;}
-.hero .kicker{color:#F0E6D2;font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;padding-left:.4em;margin:0 0 .5rem;text-shadow:0 1px 4px rgba(0,0,0,.5);}
-.hero .names{font-family:'Pinyon',cursive;font-weight:400;font-size:clamp(3.6rem,12vw,7.4rem);line-height:1.06;margin:0;padding:.1em 0 .16em;filter:drop-shadow(0 2px 14px rgba(0,0,0,.45));}
-.hero .meta{display:flex;align-items:center;justify-content:center;gap:14px;margin:10px 0 0;color:#F5ECDC;font-size:clamp(.9rem,2.4vw,1.1rem);letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.55);}
-.hero .meta i{width:5px;height:5px;border-radius:50%;background:var(--gold-light);display:inline-block;flex:none;}
-.hero .place{font-style:italic;font-size:clamp(1rem,2.6vw,1.28rem);color:#F6EEDF;margin:11px 0 0;text-shadow:0 1px 6px rgba(0,0,0,.5);}
-.hero .cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#EFE4CC;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px;}
-.hero .cue .arrow{width:13px;height:13px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);animation:bob 2.2s ease-in-out infinite;}
-@keyframes bob{0%,100%{transform:rotate(45deg) translate(0,0)}50%{transform:rotate(45deg) translate(3px,3px)}}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+@media(max-width:860px){.grid{grid-template-columns:1fr;}}
 
-/* ============ hero desktop : photo encadree a gauche, texte a droite ============ */
-@media(min-width:900px){
-  .hero{display:grid;grid-template-columns:.92fr 1.08fr;background:var(--beige);align-items:stretch;}
-  .hero-media{position:relative;inset:auto;order:1;height:auto;
-    margin:7vh 2vw 7vh clamp(28px,5vw,68px);background-position:center 64%;
-    border:1px solid var(--olive);box-shadow:0 34px 66px -42px rgba(59,58,20,.62);}
-  .hero-media::before{content:"";position:absolute;inset:9px;border:1px solid rgba(169,133,47,.6);pointer-events:none;}
-  .hero-veil{display:none;}
-  .hero-panel{position:relative;inset:auto;order:2;display:flex;flex-direction:column;justify-content:center;
-    align-items:flex-start;text-align:left;padding:6vh clamp(40px,5vw,74px) 6vh clamp(28px,3vw,48px);background:transparent;color:var(--olive-ink);}
-  .hero-panel .kicker{color:var(--gold-deep);text-shadow:none;}
-  .hero-panel .names{color:var(--olive);-webkit-text-fill-color:var(--olive);background:none;filter:none;font-size:clamp(3.4rem,6vw,5.4rem);}
-  .hero-panel .meta{justify-content:flex-start;color:var(--olive-ink);text-shadow:none;}
-  .hero-panel .meta i{background:var(--gold);}
-  .hero-panel .place{color:var(--olive-2);text-shadow:none;}
-  .hero .cue{display:none;}
-}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);
+  text-decoration:none;color:var(--text);overflow:hidden;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;}
+.card:hover,.card:focus-visible{transform:translateY(-5px);box-shadow:0 26px 50px -34px rgba(30,29,8,.5);border-color:var(--gold-line);}
+.card .thumb{aspect-ratio:16/10;background-size:cover;background-position:center;border-bottom:1px solid var(--line);}
+.card .b{padding:20px 22px 24px;display:flex;flex-direction:column;gap:6px;flex:1;}
+.card .badge{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;}
+.card h3{margin:2px 0 0;font-size:1.35rem;font-weight:600;color:var(--text);}
+.card p{margin:0;color:var(--text-2);font-size:.98rem;flex:1;}
+.card .open{margin-top:10px;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;}
 
-/* ============ sections ============ */
-.band{padding:clamp(54px,8vw,92px) 0;}
-.band.warm{background:var(--beige-warm);}
-.eyebrow{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-deep);
-  text-align:center;margin:0 0 .6rem;padding-left:.34em;}
-h2.title{font-weight:500;font-size:clamp(1.9rem,4vw,2.7rem);color:var(--olive);text-align:center;margin:0;line-height:1.15;text-wrap:balance;}
-h2.title::after{content:"";display:block;width:72px;height:1px;background:var(--gold);margin:18px auto 0;}
-.lead{text-align:center;max-width:54ch;margin:16px auto 0;color:var(--ink);font-size:1.08rem;}
-.count{text-align:center;margin-top:26px;}
-.count b{display:block;font-size:2.4rem;color:var(--olive);font-weight:600;line-height:1;font-variant-numeric:tabular-nums;}
-.count span{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--olive-2);}
-
-/* moment cards */
-.moments{display:flex;flex-direction:column;gap:20px;margin-top:clamp(32px,5vw,46px);}
-.moment{background:var(--beige);border:1px solid rgba(78,77,27,.2);padding:clamp(24px,4vw,36px);}
-.band.warm .moment{background:#FFFAF3;}
-.moment .time{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 .3rem;}
-.moment h3{font-weight:500;font-size:1.55rem;color:var(--olive);margin:0 0 .5rem;}
-.moment p{margin:.4rem 0;}
-.moment .sub{color:var(--olive-2);font-style:italic;}
-.moment .muted{color:var(--olive-2);}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin:.6rem 0;}
-.tags span{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--olive);border:1px solid rgba(78,77,27,.3);padding:6px 12px;}
-
-/* ============ FAQ accordions (clean, CSS +/-) ============ */
-.faq{margin-top:14px;}
-.faq.boxed{max-width:640px;margin:26px auto 0;}
-.faq details{border-bottom:1px solid rgba(78,77,27,.18);}
-.faq details:first-child{border-top:1px solid rgba(78,77,27,.18);}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
-  padding:17px 2px;color:var(--olive);font-size:1.06rem;font-weight:500;}
-.faq summary::-webkit-details-marker{display:none;}
-.faq summary::after{content:"+";font-size:1.25rem;line-height:1;color:var(--gold-deep);flex:none;font-weight:400;}
-.faq details[open] summary::after{content:"\2212";}
-.faq .acc{padding:2px 2px 18px;color:var(--ink);}
-.faq .acc p{margin:.35rem 0;}
-.faq .acc b{color:var(--olive);}
-.faq .acc .muted{color:var(--olive-2);font-style:italic;}
-.maplink{display:inline-block;margin-top:12px;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--olive);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px;}
-
-/* ============ dress code ============ */
-.dc-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px;}
-@media(max-width:600px){.dc-cols{grid-template-columns:1fr;}}
-.dc{background:var(--beige);border:1px solid rgba(78,77,27,.2);padding:24px;text-align:center;}
-.band.warm .dc{background:#FFFAF3;}
-.dc h4{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 .5rem;}
-.dc p{margin:0;color:var(--ink);}
-.chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
-.chips span{display:inline-flex;align-items:center;gap:9px;font-size:.82rem;color:var(--ink);}
-.chips i{width:16px;height:16px;border-radius:50%;display:inline-block;border:1px solid rgba(0,0,0,.15);}
-
-/* ============ liste / cta ============ */
-.center{text-align:center;}
-.cta-btn{display:inline-block;margin-top:22px;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--beige);background:var(--olive);text-decoration:none;padding:15px 34px;transition:background .3s;}
-.cta-btn:hover{background:var(--olive-2);}
-
-/* ============ footer ============ */
-.site-foot{background:var(--olive);color:#EFE7CF;text-align:center;padding:54px 24px 58px;}
-.site-foot .gravure{display:block;margin:0 auto 22px;color:#E7DFC1;opacity:.9;}
-.site-foot .mono{width:52px;height:auto;margin:0 auto 16px;}
-.site-foot .mono .cls-1{fill:#B9B27E;}.site-foot .mono .cls-2{fill:#EFE7CF;}
-.site-foot .fnames{font-family:'Pinyon',cursive;font-size:2.8rem;color:#F3ECD2;line-height:1;margin:0;}
-.site-foot .fdate{letter-spacing:.4em;font-size:.78rem;margin:12px 0 0;color:#D8D0AE;}
-.site-foot .fhint{font-style:italic;margin:14px 0 0;color:#E7DFC1;}
+.note{width:min(1080px,100%);margin:0 auto;padding:6px 24px clamp(40px,6vw,70px);color:var(--text-2);font-size:.92rem;text-align:center;}
+.foot{background:var(--foot-bg,#3B3A14);color:var(--foot-text,#EFE7CF);text-align:center;padding:34px 24px;font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;}
 </style>
 </head>
-<body id="top">
-
-<nav class="topnav">
-  <div class="bar">
-    <a class="brand" href="#top">
-      <svg class="mono" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 87.06 80.47">  <path class="cls-2" d="M20.13,52.13c-.08-.15.06-.27.08-.39-.03.13.08.33-.08.39Z"/>  <g>    <g>      <path class="cls-2" d="M53.88,60.93c-.28-.05-.57-.05-.85,0-.88-.12-1.74-.32-2.53-.78-2.02-1.18-2.83-3.57-1.85-5.66-1.23-.37-1.66-1.65-1.19-2.78.68-1.65,2.78-2.74,4.31-3.47.45-.21.69-.66.76-1.07.16-.92-.68-1.68-1-1.42-.2.17-.3.42-.56.55-.58.3-1.45-.06-1.55-.76-.07-.5.34-.97.79-1.19,1.13-.55,2.56-.26,3.4.69.76.85,1,1.98.96,3.06l-.08.39c-.03.78-.31,1.56-.84,2.22,1.55.87,2.46,3.4,1.17,4.83-.38.42-.81.74-1.39.75.24-.64.25-1.71-.36-2.12-.56-.37-1.33-.49-1.92-.14-.72.43-1.04,1.23-1.08,2.02-.06,1.2.5,2.21,1.62,2.67.8.32,1.73.4,2.57.12,1.48-.48,2.54-2.06,3.11-3.45.67-1.64.94-3.43.84-5.2-.21-3.83-2.16-7.08-5.51-8.98.92-1.56.79-3.07.76-4.84,0-.2-.04-.41-.07-.63-.26-2.26-.82-4.43-1.5-6.58l-1.42,4.28-1.78,5.4-1.62,4.94-1.13,3.4c-.22-.89-.26-1.65-.32-2.47l-.06-.86-.05-1.74c-.02-.63-.15-1.39-.03-2.04l3.31-10.55c.56-1.8.85-4.75-1.47-5.22.08-.29.27-.43.43-.62.85-1.02,2.18-.92,3.28-.28.08-2.18,1.49-3.9,3.71-4.09.39-.03.76.1,1.19.23-2.42,3.83-1.83,9.47.24,13.28,1.25,2.29,3.05,4.14,5.6,4.8-.64,1.28-1.02,2.6-.92,3.95.18,2.3,1.75,4.19,3.98,4.67,1.3.28,2.76-.21,3.3-1.49.18-.43.15-.95-.2-1.29-.25-.25-.58-.36-.9-.46-.16.61-.72.95-1.27.89-.58-.07-1.07-.52-1.09-1.1-.04-.85.48-1.45,1.32-1.59,1.11-.18,2.35.15,3.13.97,1.67,1.75.94,5.27-1.29,6.36.62,1.23.69,2.95-.79,3.64-.04-.75-.35-1.31-.95-1.52-.64-.23-1.25.01-1.75.61-.04-.62-.1-1.24-.67-1.53s-1.36-.2-1.88.2c-.66.51-.63,1.56-.02,2.09.33.29.72.3,1.18.36-3.09,2.42-4.58,8.13-9.06,8.54ZM55.89,38.07v.54c0,.52-.05,1.03-.23,1.56,1.04.75,1.93,1.64,2.71,2.66.28.5,0-1.27.05-1.04-.15-.68.09-2.32.47-3-1.08-.38-1.73-.94-2.52-1.81-.25-.27-.38-.6-.71-.82.14.71.27,1.29.24,1.91Z"/>      <path class="cls-2" d="M53.88,60.93c-.26.02-.59.03-.85,0,.23-.13.62-.13.85,0Z"/>      <path class="cls-2" d="M54.5,48.5c0-.13-.05-.31.08-.39,0,.13.05.31-.08.39Z"/>      <path class="cls-2" d="M55.89,38.61v-.54c.13.12.13.42,0,.54Z"/>    </g>    <g>      <g>        <path class="cls-1" d="M45.08,23.63c-.07.25-.07.52,0,.77.1,1.55.41,3.07.89,4.58.05.16.26.4.2.6-.6,1.86-1.01,3.73-1.13,5.67l-.05.88c-.02.36-.09.68-.06,1-.02.07-.05.07-.08,0l-.04-.13v3.67s.04-.06.04-.06c.02-.07.05-.07.08,0v1.08l.08.46c.03.39-.08.8.08,1.16-.05.15-.06.31,0,.46-.03.28.05.54.07.85l.05.81c.08,1.33.19,2.66.63,3.93l.36,1.05c-.61,1.74-.89,3.48-.99,5.29-.03.51-.08,1.01-.01,1.51.08.62-.07.8.13,1.47-.06.12-.06.27,0,.39.1.78.16,1.56.25,2.37l.15,1.32c.04.37.13.7.12,1.1-.42.28-.78.65-1.08,1.07-.42.58-1.06,1.26-1.57,1.75-1.06,1.01-2.33,1.69-3.75,2.05-.59.15-1.14.21-1.73.28-2.12.25-4.29-.82-5.91-2.11-.44-.35-.91-.59-1.4-.85-1.22-.66-2.5-.62-3.67.18.64.58.74,1.64.04,2.23-.41.35-.97.54-1.51.4-1.31-.34-1.62-2.16-.95-3.15.86-1.26,2.24-1.93,3.75-2.12,1-.12,1.95.15,2.91.52l-.11-.76s-.21-1.94-.07-1.91c.9.19,2.34.96,2.63,1.85,1.01-.88,3.12-1.47,3.85-.26.29.47.25,1.01-.03,1.49s-.9.68-1.49.56c-.34-.07-.54-.42-.78-.72-.24.39-.17.82.01,1.21.88,1.95,3.68,1.25,4.91.21,1.47-1.25,2.12-3.5,2.22-5.36.09-1.55.08-3.08,0-4.64-.08-1.85-.46-3.58-.99-5.36.64-1.85.86-3.73,1.01-5.66.04-.53-.03-1.03.1-1.56l-.03-6.16-.08-1.49c-.11-2.06-.41-4.05-.99-6.02.73-2.43,1.6-5.88.57-8.21-.51-1.15-1.34-2.03-2.5-2.53-.39-.17-.8-.27-1.24-.1.27.83-.27,1.67-1.06,1.78l-.54.08c-.78-.19-1.3-.87-1.18-1.71.18-1.31,1.45-2.2,2.26-2.22l1.15-.02c1.68.37,2.59.93,3.84,2.02.23-1.15-.57-2.16-1.67-2.32-.22-.06-.42-.06-.62,0-.35,0-.13-.82.46-1.25.44-.32,1.02-.37,1.6-.22.1-1.33.93-2.17,1.37-3.39.39,1.2,1.16,2.21,1.31,3.4.61-.19,1.24-.1,1.76.3.35.27.55.71.54,1.14-.18.09-.32-.05-.49-.05-1.26.05-2.12,1.21-1.89,2.46,1.3-1.28,3.26-2.38,5.19-2.04,1.22.22,2.22,1.29,2.16,2.53-.03.68-.53,1.17-1.07,1.31-.61.17-1.25-.05-1.59-.56-.27-.4-.31-.82-.17-1.28-1.06-.29-2.29.65-2.9,1.38-.85,1.04-1.31,2.29-1.35,3.6Z"/>        <path class="cls-2" d="M44.92,39.92c-.02.07-.05.07-.08,0-.07-.67-.06-1.47,0-2.16.02-.07.05-.07.08,0v2.16Z"/>        <path class="cls-2" d="M45.08,24.4c-.13-.2-.13-.57,0-.77,0,.25-.02.52,0,.77Z"/>        <path class="cls-2" d="M44.92,40.62h-.08c-.06-.2-.07-.5,0-.7h.08v.7Z"/>        <path class="cls-2" d="M40.75,16.29h-.62c.16-.21.44-.03.62,0Z"/>        <path class="cls-2" d="M44.92,37.76h-.08c-.06-.17-.05-.44,0-.62h.08c.02.2,0,.41,0,.62Z"/>        <path class="cls-2" d="M36.89,20.46c-.17.02-.33.13-.54.08.12-.16.36-.05.54-.08Z"/>        <path class="cls-2" d="M45,42.16c-.14-.1-.08-.31-.08-.46.14.1.07.31.08.46Z"/>        <path class="cls-2" d="M41.75,42.32c-.13-.1-.13-.37,0-.46.02.13.02.33,0,.46Z"/>        <path class="cls-2" d="M45.08,43.79c-.13-.1-.13-.37,0-.46.02.12.02.33,0,.46Z"/>        <path class="cls-2" d="M41.45,45.87c.02-.13-.06-.31.08-.39.03.12.03.32-.08.39Z"/>        <path class="cls-2" d="M45.31,59.08c-.13-.08-.09-.44,0-.39.04.12-.03.27,0,.39Z"/>        <path class="cls-2" d="M44.84,37.14v2.78c0,.23.03.47,0,.7-.04.33.11.7-.09,1.04l.03-5.3c.14.27.02.54.06.78Z"/>      </g>      <g>        <path class="cls-2" d="M41.75,41.85c-.05.15-.05.31,0,.46-.03.18-.22,3.22-.23,3.17l-.08.39s0,1.12-.17,1.45l-3.23-9.71-2.81-8.45c-.83,2.59-1.49,5.32-1.59,7.99-.07.31-.07.69,0,1,0,.95.22,2.22.78,3.07-3.18,1.77-5.14,4.85-5.46,8.45-.24,2.72.33,5.81,2.15,7.91,1.1,1.28,2.43,1.69,4.06,1.25,1.07-.29,1.8-1.15,1.92-2.25.14-1.24-.57-2.75-1.88-2.76-.62,0-1.22.24-1.52.83-.26.51-.14,1.1.04,1.66-1.32-.09-2.09-1.55-2.01-2.63.1-1.24.73-2.28,1.78-2.97-1.3-1.69-1.28-4.8.53-6.08,1.19-.85,3.36-.75,3.7.61.11.44-.13.8-.46,1-.63.39-1.26.11-1.62-.48-.36-.17-.82.27-.96.62-.3.74-.05,1.6.71,1.91,1.56.64,2.44.96,3.64,2.16.71.71,1.08,1.64.8,2.63-.19.68-.66,1.22-1.36,1.43.33.69.43,1.36.42,2.03l-.08.39c-.05,1.06-.63,2-1.45,2.73-.92.81-2.07,1.17-3.26,1.29-.3-.05-.63-.05-.93,0-1.24-.19-2.34-.71-3.29-1.58-1.92-1.75-3.44-4.76-4.68-6.04l-.93-.95c.73.04,1.43-.3,1.55-.98.16-.86-.29-1.54-1.08-1.79-.72-.23-1.47.03-1.77.77-.1.26-.12.54-.17.86-.54-.61-1.36-.85-2.01-.41-.3.2-.53.53-.59.94l-.08.39c-.74-.18-1.16-.92-1.23-1.72-.05-.65.2-1.26.38-1.89-1.38-.77-2.14-2.11-2.26-3.64-.14-1.81.96-3.33,2.74-3.63,1.3-.22,2.33-.12,2.76,1.22l-.08.54c-.06.49-.56.86-1.07.89s-1.06-.32-1.22-.86c-.58.03-1.03.39-1.19.9-.04.18-.03.36,0,.54.22,1.03,1.23,1.75,2.34,1.83,1.26.09,2.44-.44,3.37-1.29,2.1-2.03,1.97-4.91.72-7.4,2.7-.66,4.47-2.67,5.67-4.97,1.98-3.86,2.5-9.28.12-13.1.46-.16.84-.26,1.27-.23,1.64.14,3.01,1.23,3.43,2.82.11.42.16.81.24,1.25,1.24-.8,2.97-.65,3.67.88-2.93.88-1.62,4.57-1,6.56l2.93,9.41c.17.53-.07,1.11.02,1.61ZM28.62,42.74c-.03.11.06.16.09.14l.1-.07c.99-.71,1.64-1.88,2.66-2.64-.38-1.35-.24-2.66.03-4.06-.62.82-1.22,1.56-2.05,2.1-.35.26-.71.45-1.15.58.49,1.26.63,2.59.31,3.96Z"/>        <path class="cls-2" d="M33.65,38.15c-.11.23-.11-1.23,0-1v1Z"/>        <path class="cls-2" d="M34.11,60.93c-.28.03-.65.04-.93,0-.2-.11,1.13-.11.93,0Z"/>        <path class="cls-2" d="M22.45,43.01c.03-.18-.08-.42.08-.54.06.2-.06.38-.08.54Z"/>        <path class="cls-2" d="M18.97,44.48c-.05-.24-.08-.3,0-.54v.54Z"/>        <path class="cls-2" d="M38.82,56.91c.01-.13-.06-.31.08-.39,0,.14,0,.28-.08.39Z"/>      </g>    </g>  </g></svg>
-      <b>Manon &amp; Julien</b>
-    </a>
-    <button class="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
-    <div class="nav-links" id="navlinks">
-      <a href="#jour-j">Le jour J</a>
-      <a href="#venir">Venir</a>
-      <a href="#dormir">Dormir</a>
-      <a href="#dress-code">Dress code</a>
-      <a href="#liste">Liste</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="hero-media"></div>
-  <div class="hero-veil"></div>
-  <div class="hero-panel">
-    <p class="kicker">Cérémonie religieuse</p>
-    <h1 class="names gilded">Manon &amp; Julien</h1>
-    <p class="meta"><span>24 octobre 2026</span><i></i><span>Touraine</span></p>
-    <p class="place">Amboise · Château de La Bourdaisière</p>
-  </div>
-  <a class="cue" href="#invitation" aria-label="Descendre"><span>Découvrir</span><span class="arrow"></span></a>
+<body>
+<header class="masthead">
+  <svg class="mono" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 87.06 80.47">  <path class="cls-2" d="M20.13,52.13c-.08-.15.06-.27.08-.39-.03.13.08.33-.08.39Z"/>  <g>    <g>      <path class="cls-2" d="M53.88,60.93c-.28-.05-.57-.05-.85,0-.88-.12-1.74-.32-2.53-.78-2.02-1.18-2.83-3.57-1.85-5.66-1.23-.37-1.66-1.65-1.19-2.78.68-1.65,2.78-2.74,4.31-3.47.45-.21.69-.66.76-1.07.16-.92-.68-1.68-1-1.42-.2.17-.3.42-.56.55-.58.3-1.45-.06-1.55-.76-.07-.5.34-.97.79-1.19,1.13-.55,2.56-.26,3.4.69.76.85,1,1.98.96,3.06l-.08.39c-.03.78-.31,1.56-.84,2.22,1.55.87,2.46,3.4,1.17,4.83-.38.42-.81.74-1.39.75.24-.64.25-1.71-.36-2.12-.56-.37-1.33-.49-1.92-.14-.72.43-1.04,1.23-1.08,2.02-.06,1.2.5,2.21,1.62,2.67.8.32,1.73.4,2.57.12,1.48-.48,2.54-2.06,3.11-3.45.67-1.64.94-3.43.84-5.2-.21-3.83-2.16-7.08-5.51-8.98.92-1.56.79-3.07.76-4.84,0-.2-.04-.41-.07-.63-.26-2.26-.82-4.43-1.5-6.58l-1.42,4.28-1.78,5.4-1.62,4.94-1.13,3.4c-.22-.89-.26-1.65-.32-2.47l-.06-.86-.05-1.74c-.02-.63-.15-1.39-.03-2.04l3.31-10.55c.56-1.8.85-4.75-1.47-5.22.08-.29.27-.43.43-.62.85-1.02,2.18-.92,3.28-.28.08-2.18,1.49-3.9,3.71-4.09.39-.03.76.1,1.19.23-2.42,3.83-1.83,9.47.24,13.28,1.25,2.29,3.05,4.14,5.6,4.8-.64,1.28-1.02,2.6-.92,3.95.18,2.3,1.75,4.19,3.98,4.67,1.3.28,2.76-.21,3.3-1.49.18-.43.15-.95-.2-1.29-.25-.25-.58-.36-.9-.46-.16.61-.72.95-1.27.89-.58-.07-1.07-.52-1.09-1.1-.04-.85.48-1.45,1.32-1.59,1.11-.18,2.35.15,3.13.97,1.67,1.75.94,5.27-1.29,6.36.62,1.23.69,2.95-.79,3.64-.04-.75-.35-1.31-.95-1.52-.64-.23-1.25.01-1.75.61-.04-.62-.1-1.24-.67-1.53s-1.36-.2-1.88.2c-.66.51-.63,1.56-.02,2.09.33.29.72.3,1.18.36-3.09,2.42-4.58,8.13-9.06,8.54ZM55.89,38.07v.54c0,.52-.05,1.03-.23,1.56,1.04.75,1.93,1.64,2.71,2.66.28.5,0-1.27.05-1.04-.15-.68.09-2.32.47-3-1.08-.38-1.73-.94-2.52-1.81-.25-.27-.38-.6-.71-.82.14.71.27,1.29.24,1.91Z"/>      <path class="cls-2" d="M53.88,60.93c-.26.02-.59.03-.85,0,.23-.13.62-.13.85,0Z"/>      <path class="cls-2" d="M54.5,48.5c0-.13-.05-.31.08-.39,0,.13.05.31-.08.39Z"/>      <path class="cls-2" d="M55.89,38.61v-.54c.13.12.13.42,0,.54Z"/>    </g>    <g>      <g>        <path class="cls-1" d="M45.08,23.63c-.07.25-.07.52,0,.77.1,1.55.41,3.07.89,4.58.05.16.26.4.2.6-.6,1.86-1.01,3.73-1.13,5.67l-.05.88c-.02.36-.09.68-.06,1-.02.07-.05.07-.08,0l-.04-.13v3.67s.04-.06.04-.06c.02-.07.05-.07.08,0v1.08l.08.46c.03.39-.08.8.08,1.16-.05.15-.06.31,0,.46-.03.28.05.54.07.85l.05.81c.08,1.33.19,2.66.63,3.93l.36,1.05c-.61,1.74-.89,3.48-.99,5.29-.03.51-.08,1.01-.01,1.51.08.62-.07.8.13,1.47-.06.12-.06.27,0,.39.1.78.16,1.56.25,2.37l.15,1.32c.04.37.13.7.12,1.1-.42.28-.78.65-1.08,1.07-.42.58-1.06,1.26-1.57,1.75-1.06,1.01-2.33,1.69-3.75,2.05-.59.15-1.14.21-1.73.28-2.12.25-4.29-.82-5.91-2.11-.44-.35-.91-.59-1.4-.85-1.22-.66-2.5-.62-3.67.18.64.58.74,1.64.04,2.23-.41.35-.97.54-1.51.4-1.31-.34-1.62-2.16-.95-3.15.86-1.26,2.24-1.93,3.75-2.12,1-.12,1.95.15,2.91.52l-.11-.76s-.21-1.94-.07-1.91c.9.19,2.34.96,2.63,1.85,1.01-.88,3.12-1.47,3.85-.26.29.47.25,1.01-.03,1.49s-.9.68-1.49.56c-.34-.07-.54-.42-.78-.72-.24.39-.17.82.01,1.21.88,1.95,3.68,1.25,4.91.21,1.47-1.25,2.12-3.5,2.22-5.36.09-1.55.08-3.08,0-4.64-.08-1.85-.46-3.58-.99-5.36.64-1.85.86-3.73,1.01-5.66.04-.53-.03-1.03.1-1.56l-.03-6.16-.08-1.49c-.11-2.06-.41-4.05-.99-6.02.73-2.43,1.6-5.88.57-8.21-.51-1.15-1.34-2.03-2.5-2.53-.39-.17-.8-.27-1.24-.1.27.83-.27,1.67-1.06,1.78l-.54.08c-.78-.19-1.3-.87-1.18-1.71.18-1.31,1.45-2.2,2.26-2.22l1.15-.02c1.68.37,2.59.93,3.84,2.02.23-1.15-.57-2.16-1.67-2.32-.22-.06-.42-.06-.62,0-.35,0-.13-.82.46-1.25.44-.32,1.02-.37,1.6-.22.1-1.33.93-2.17,1.37-3.39.39,1.2,1.16,2.21,1.31,3.4.61-.19,1.24-.1,1.76.3.35.27.55.71.54,1.14-.18.09-.32-.05-.49-.05-1.26.05-2.12,1.21-1.89,2.46,1.3-1.28,3.26-2.38,5.19-2.04,1.22.22,2.22,1.29,2.16,2.53-.03.68-.53,1.17-1.07,1.31-.61.17-1.25-.05-1.59-.56-.27-.4-.31-.82-.17-1.28-1.06-.29-2.29.65-2.9,1.38-.85,1.04-1.31,2.29-1.35,3.6Z"/>        <path class="cls-2" d="M44.92,39.92c-.02.07-.05.07-.08,0-.07-.67-.06-1.47,0-2.16.02-.07.05-.07.08,0v2.16Z"/>        <path class="cls-2" d="M45.08,24.4c-.13-.2-.13-.57,0-.77,0,.25-.02.52,0,.77Z"/>        <path class="cls-2" d="M44.92,40.62h-.08c-.06-.2-.07-.5,0-.7h.08v.7Z"/>        <path class="cls-2" d="M40.75,16.29h-.62c.16-.21.44-.03.62,0Z"/>        <path class="cls-2" d="M44.92,37.76h-.08c-.06-.17-.05-.44,0-.62h.08c.02.2,0,.41,0,.62Z"/>        <path class="cls-2" d="M36.89,20.46c-.17.02-.33.13-.54.08.12-.16.36-.05.54-.08Z"/>        <path class="cls-2" d="M45,42.16c-.14-.1-.08-.31-.08-.46.14.1.07.31.08.46Z"/>        <path class="cls-2" d="M41.75,42.32c-.13-.1-.13-.37,0-.46.02.13.02.33,0,.46Z"/>        <path class="cls-2" d="M45.08,43.79c-.13-.1-.13-.37,0-.46.02.12.02.33,0,.46Z"/>        <path class="cls-2" d="M41.45,45.87c.02-.13-.06-.31.08-.39.03.12.03.32-.08.39Z"/>        <path class="cls-2" d="M45.31,59.08c-.13-.08-.09-.44,0-.39.04.12-.03.27,0,.39Z"/>        <path class="cls-2" d="M44.84,37.14v2.78c0,.23.03.47,0,.7-.04.33.11.7-.09,1.04l.03-5.3c.14.27.02.54.06.78Z"/>      </g>      <g>        <path class="cls-2" d="M41.75,41.85c-.05.15-.05.31,0,.46-.03.18-.22,3.22-.23,3.17l-.08.39s0,1.12-.17,1.45l-3.23-9.71-2.81-8.45c-.83,2.59-1.49,5.32-1.59,7.99-.07.31-.07.69,0,1,0,.95.22,2.22.78,3.07-3.18,1.77-5.14,4.85-5.46,8.45-.24,2.72.33,5.81,2.15,7.91,1.1,1.28,2.43,1.69,4.06,1.25,1.07-.29,1.8-1.15,1.92-2.25.14-1.24-.57-2.75-1.88-2.76-.62,0-1.22.24-1.52.83-.26.51-.14,1.1.04,1.66-1.32-.09-2.09-1.55-2.01-2.63.1-1.24.73-2.28,1.78-2.97-1.3-1.69-1.28-4.8.53-6.08,1.19-.85,3.36-.75,3.7.61.11.44-.13.8-.46,1-.63.39-1.26.11-1.62-.48-.36-.17-.82.27-.96.62-.3.74-.05,1.6.71,1.91,1.56.64,2.44.96,3.64,2.16.71.71,1.08,1.64.8,2.63-.19.68-.66,1.22-1.36,1.43.33.69.43,1.36.42,2.03l-.08.39c-.05,1.06-.63,2-1.45,2.73-.92.81-2.07,1.17-3.26,1.29-.3-.05-.63-.05-.93,0-1.24-.19-2.34-.71-3.29-1.58-1.92-1.75-3.44-4.76-4.68-6.04l-.93-.95c.73.04,1.43-.3,1.55-.98.16-.86-.29-1.54-1.08-1.79-.72-.23-1.47.03-1.77.77-.1.26-.12.54-.17.86-.54-.61-1.36-.85-2.01-.41-.3.2-.53.53-.59.94l-.08.39c-.74-.18-1.16-.92-1.23-1.72-.05-.65.2-1.26.38-1.89-1.38-.77-2.14-2.11-2.26-3.64-.14-1.81.96-3.33,2.74-3.63,1.3-.22,2.33-.12,2.76,1.22l-.08.54c-.06.49-.56.86-1.07.89s-1.06-.32-1.22-.86c-.58.03-1.03.39-1.19.9-.04.18-.03.36,0,.54.22,1.03,1.23,1.75,2.34,1.83,1.26.09,2.44-.44,3.37-1.29,2.1-2.03,1.97-4.91.72-7.4,2.7-.66,4.47-2.67,5.67-4.97,1.98-3.86,2.5-9.28.12-13.1.46-.16.84-.26,1.27-.23,1.64.14,3.01,1.23,3.43,2.82.11.42.16.81.24,1.25,1.24-.8,2.97-.65,3.67.88-2.93.88-1.62,4.57-1,6.56l2.93,9.41c.17.53-.07,1.11.02,1.61ZM28.62,42.74c-.03.11.06.16.09.14l.1-.07c.99-.71,1.64-1.88,2.66-2.64-.38-1.35-.24-2.66.03-4.06-.62.82-1.22,1.56-2.05,2.1-.35.26-.71.45-1.15.58.49,1.26.63,2.59.31,3.96Z"/>        <path class="cls-2" d="M33.65,38.15c-.11.23-.11-1.23,0-1v1Z"/>        <path class="cls-2" d="M34.11,60.93c-.28.03-.65.04-.93,0-.2-.11,1.13-.11.93,0Z"/>        <path class="cls-2" d="M22.45,43.01c.03-.18-.08-.42.08-.54.06.2-.06.38-.08.54Z"/>        <path class="cls-2" d="M18.97,44.48c-.05-.24-.08-.3,0-.54v.54Z"/>        <path class="cls-2" d="M38.82,56.91c.01-.13-.06-.31.08-.39,0,.14,0,.28-.08.39Z"/>      </g>    </g>  </g></svg>
+  <p class="eyebrow">Site de mariage &middot; propositions</p>
+  <h1>Manon &amp; Julien</h1>
+  <p class="sub">Voici les différentes maquettes de site. Ouvre chacune pour la parcourir en entier, puis dis-nous laquelle tu préfères.</p>
+  <p class="date">24 octobre 2026 · Château de La Bourdaisière</p>
 </header>
 
-<section id="invitation" class="band">
-  <div class="wrap center">
-    <p class="eyebrow">Nous nous marions</p>
-    <h2 class="title">Au cœur de la Touraine</h2>
-    <p class="lead">Nous avons la joie de vous convier à célébrer notre mariage. Retrouvez ici le programme du jour J et toutes les informations pratiques pour nous rejoindre.</p>
-    <p class="count"><b id="cd">—</b><span>jours avant le oui</span></p>
+<section class="group" aria-labelledby="g1">
+  <h2 id="g1">Propositions Claude</h2>
+  <div class="grid">
+    <a class="card" href="/optiona" aria-label="Ouvrir la proposition A : gravure claire">
+      <span class="thumb" style="background-image:url('/assets/img/couple-hero.jpg')"></span>
+      <span class="b"><span class="badge">Proposition A</span><h3>Gravure claire</h3>
+        <p>Classique et lumineux, esprit papeterie gravée, liserets et vert olive.</p>
+        <span class="open">Ouvrir &#8594;</span></span>
+    </a>
+    <a class="card" href="/optionb" aria-label="Ouvrir la proposition B : immersive">
+      <span class="thumb" style="background-image:url('/assets/img/chateau-courtyard.jpg')"></span>
+      <span class="b"><span class="badge">Proposition B</span><h3>Immersive</h3>
+        <p>Photographique et généreux, grandes images du château, mise en page moderne.</p>
+        <span class="open">Ouvrir &#8594;</span></span>
+    </a>
+    <a class="card" href="/optionc" aria-label="Ouvrir la proposition C : nocturne">
+      <span class="thumb" style="background-image:url('/assets/img/chateau-aerial.jpg')"></span>
+      <span class="b"><span class="badge">Proposition C</span><h3>Nocturne royale</h3>
+        <p>Sombre et dramatique, dorures sur fond profond, la gravure en majesté.</p>
+        <span class="open">Ouvrir &#8594;</span></span>
+    </a>
   </div>
 </section>
 
-<section id="jour-j" class="band warm">
-  <div class="wrap">
-    <p class="eyebrow">Le 24 octobre</p>
-    <h2 class="title">Le déroulé du jour J</h2>
-    <div class="moments">
-
-      <div class="moment">
-        <p class="time">14h30</p>
-        <h3>Cérémonie religieuse</h3>
-        <p><b>Collégiale Saint-Denis d'Amboise</b><br><span class="sub">21 Parvis Saint-Denis, 37400 Amboise</span></p>
-        <p>Nous vous remercions de prévoir votre arrivée entre <b>14h00 et 14h10</b>, afin que chacun puisse s'installer sereinement avant le début de la cérémonie.</p>
-        <div class="faq">
-          <details>
-            <summary>Voir le stationnement</summary>
-            <div class="acc">
-              <p class="muted">Le centre d'Amboise étant piéton le samedi, nous vous recommandons :</p>
-              <p><b>Parking des Tanneurs</b> — 8 Mail Saint-Thomas, 5 min à pied</p>
-              <p><b>Parking du Mail</b> — Quais de Loire, 7 min à pied</p>
-              <p>Pour les personnes à mobilité réduite, privilégiez le <b>Parking Richelieu</b>, au plus près de la collégiale.</p>
-              <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Coll%C3%A9giale%20Saint-Denis%2C%2021%20Parvis%20Saint-Denis%2C%2037400%20Amboise" target="_blank" rel="noopener">Ouvrir dans Google Maps &#8599;</a>
-            </div>
-          </details>
-        </div>
-      </div>
-
-      <div class="moment">
-        <p class="time">Puis, direction Montlouis-sur-Loire</p>
-        <h3>Réception au château</h3>
-        <p>À l'issue de la cérémonie, retrouvons-nous au <b>Château de La Bourdaisière</b> pour poursuivre les festivités.</p>
-        <div class="tags"><span>Cocktail</span><span>Dîner</span><span>Soirée</span><span>Brunch</span></div>
-        <p class="muted">Le programme détaillé vous sera communiqué prochainement.</p>
-        <div class="faq">
-          <details>
-            <summary>Voir l'accès au château</summary>
-            <div class="acc">
-              <p><b>Château de La Bourdaisière</b><br>25 rue de La Bourdaisière, 37270 Montlouis-sur-Loire</p>
-              <p>Un <b>parking privé et gratuit</b> est disponible directement au château.</p>
-              <p class="muted">Le jour J, une signalétique spécifique vous guidera depuis l'entrée du domaine jusqu'aux espaces de stationnement et de réception.</p>
-              <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Ch%C3%A2teau%20de%20La%20Bourdaisi%C3%A8re%2C%2025%20rue%20de%20La%20Bourdaisi%C3%A8re%2C%2037270%20Montlouis-sur-Loire" target="_blank" rel="noopener">Ouvrir dans Google Maps &#8599;</a>
-            </div>
-          </details>
-        </div>
-      </div>
-
-    </div>
+<section class="group" aria-labelledby="g2">
+  <h2 id="g2">Propositions ChatGPT</h2>
+  <div class="grid">
+    <a class="card" href="/option1" aria-label="Ouvrir la proposition ChatGPT numero 1">
+      <span class="thumb" style="background-image:url('/assets/img/chateau-engraving.jpg')"></span>
+      <span class="b"><span class="badge">ChatGPT &middot; 1</span><h3>Proposition éditoriale</h3>
+        <p>Réalisée avec ChatGPT (Codex).</p>
+        <span class="open">Ouvrir &#8594;</span></span>
+    </a>
+    <a class="card" href="/option2" aria-label="Ouvrir la proposition ChatGPT numero 2">
+      <span class="thumb" style="background-image:url('/assets/img/couple.jpg')"></span>
+      <span class="b"><span class="badge">ChatGPT &middot; 2</span><h3>Proposition romantique</h3>
+        <p>Réalisée avec ChatGPT (Codex).</p>
+        <span class="open">Ouvrir &#8594;</span></span>
+    </a>
+    <a class="card" href="/option3" aria-label="Ouvrir la proposition ChatGPT numero 3">
+      <span class="thumb" style="background-image:url('/assets/img/chateau-courtyard.jpg')"></span>
+      <span class="b"><span class="badge">ChatGPT &middot; 3</span><h3>Proposition nocturne</h3>
+        <p>Réalisée avec ChatGPT (Codex).</p>
+        <span class="open">Ouvrir &#8594;</span></span>
+    </a>
+    <a class="card" href="/option4" aria-label="Ouvrir la proposition ChatGPT numero 4">
+      <span class="thumb" style="background-image:url('/assets/img/chateau-aerial.jpg')"></span>
+      <span class="b"><span class="badge">ChatGPT &middot; 4</span><h3>L'herbier du château</h3>
+        <p>Réalisée avec ChatGPT (Codex).</p>
+        <span class="open">Ouvrir &#8594;</span></span>
+    </a>
+    <a class="card" href="/option5" aria-label="Ouvrir la proposition ChatGPT numero 5">
+      <span class="thumb" style="background-image:url('/assets/img/couple-hero.jpg')"></span>
+      <span class="b"><span class="badge">ChatGPT &middot; 5</span><h3>Un domaine en Touraine</h3>
+        <p>Réalisée avec ChatGPT (Codex).</p>
+        <span class="open">Ouvrir &#8594;</span></span>
+    </a>
+    <a class="card" href="/option6" aria-label="Ouvrir la proposition ChatGPT numero 6">
+      <span class="thumb" style="background-image:url('/assets/img/chateau-engraving.jpg')"></span>
+      <span class="b"><span class="badge">ChatGPT &middot; 6</span><h3>Carnet de week-end</h3>
+        <p>Réalisée avec ChatGPT (Codex).</p>
+        <span class="open">Ouvrir &#8594;</span></span>
+    </a>
   </div>
 </section>
 
-<section id="venir" class="band">
-  <div class="wrap">
-    <p class="eyebrow">Pour celles et ceux qui viennent de plus loin</p>
-    <h2 class="title">Venir en Touraine</h2>
-    <div class="faq boxed">
-      <details>
-        <summary>En train</summary>
-        <div class="acc">
-          <p><b>Gare TGV de Saint-Pierre-des-Corps</b><br><span class="muted">La gare à privilégier pour rejoindre facilement La Bourdaisière.</span></p>
-          <p><b>Gare d'Amboise</b><br><span class="muted">Une alternative pratique pour rejoindre Amboise et ses environs.</span></p>
-        </div>
-      </details>
-      <details>
-        <summary>En avion</summary>
-        <div class="acc"><p>L'aéroport le plus proche est <b>Tours Val de Loire</b>.</p></div>
-      </details>
-      <details>
-        <summary>Taxi &amp; VTC</summary>
-        <div class="acc"><p>Si vous prévoyez un retour en taxi ou en VTC après la soirée, nous vous conseillons d'anticiper votre réservation.</p></div>
-      </details>
-    </div>
-  </div>
-</section>
+<p class="note">Les vignettes des propositions ChatGPT sont illustratives. Ouvre chaque page pour voir le rendu réel.</p>
 
-<section id="dormir" class="band warm">
-  <div class="wrap center">
-    <p class="eyebrow">Sur place</p>
-    <h2 class="title">Vous dormez au château&nbsp;?</h2>
-    <p class="lead">Pour celles et ceux séjournant au Château de La Bourdaisière, les chambres seront disponibles à partir de <b>16h00</b>.</p>
-    <div class="faq boxed" style="text-align:left">
-      <details>
-        <summary>J'arrive avant la cérémonie</summary>
-        <div class="acc"><p>Pour celles et ceux qui souhaitent arriver plus tôt et se changer avant d'assister à la cérémonie, <b>une chambre sera mise à disposition au château</b>.</p></div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section id="dress-code" class="band">
-  <div class="wrap">
-    <p class="eyebrow">Une élégance d'automne</p>
-    <h2 class="title">Dress code</h2>
-    <p class="lead">Nous rêvons d'une journée où chacun se sera fait beau : des tenues habillées, élégantes et intemporelles, en harmonie avec les vieilles pierres et la lumière des bougies.</p>
-    <div class="dc-cols">
-      <div class="dc"><h4>Messieurs</h4><p>Costume sombre et cravate.</p></div>
-      <div class="dc"><h4>Mesdames</h4><p>Robe longue ou beau tailleur, avec, pour celles qui le souhaitent, une élégante coiffe pour parfaire la tenue.</p></div>
-    </div>
-    <div class="faq boxed">
-      <details>
-        <summary>Quelques inspirations de couleurs</summary>
-        <div class="acc">
-          <div class="chips">
-            <span><i style="background:#4E4D1B"></i>Olive</span>
-            <span><i style="background:#7D7950"></i>Kaki</span>
-            <span><i style="background:#2F4A34"></i>Vert forêt</span>
-            <span><i style="background:#1B2A4A"></i>Bleu nuit</span>
-            <span><i style="background:#5B2A43"></i>Prune</span>
-            <span><i style="background:#5E1F28"></i>Bordeaux</span>
-            <span><i style="background:#4A2F22"></i>Chocolat</span>
-            <span><i style="background:#B5623B"></i>Terracotta</span>
-          </div>
-          <p class="muted" style="margin-top:14px">Les teintes profondes de l'automne seront particulièrement belles sous les bougies. Nous réservons simplement le blanc et l'ivoire à la mariée. Pour le reste, soyez libres de votre élégance.</p>
-        </div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section id="liste" class="band warm">
-  <div class="wrap center">
-    <p class="eyebrow">Votre présence est déjà le plus beau des cadeaux</p>
-    <h2 class="title">Liste de mariage</h2>
-    <p class="lead">Pour celles et ceux qui souhaiteraient néanmoins participer à nos projets et à notre nouvelle vie à deux :</p>
-    <a class="cta-btn" href="https://www.millemercismariage.com/manon-et-julien/liste.html" target="_blank" rel="noopener">Découvrir notre liste</a>
-  </div>
-</section>
-
-<footer class="site-foot">
-  <svg class="gravure" viewBox="0 0 150 90" width="210" height="126" fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M6 80 C40 73 90 75 130 78 C138 78 144 76 148 80"/>
-    <path d="M46 80 L46 44 L108 44 L108 80"/>
-    <path d="M46 44 L77 26 L108 44"/>
-    <path d="M40 80 L40 40 C40 34 50 34 50 40 L50 80"/>
-    <path d="M38 40 L45 27 L52 40"/><path d="M45 27 L45 20"/><path d="M42 22 L48 22"/>
-    <path d="M104 80 L104 38 C104 32 116 32 116 38 L116 80"/>
-    <path d="M102 38 L110 25 L118 38"/><path d="M110 25 L110 18"/><path d="M107 20 L113 20"/>
-    <path d="M69 26 L77 9 L85 26"/><path d="M77 9 L77 3"/><path d="M74 5 L80 5"/>
-    <path d="M58 56 L67 56 L67 70 L58 70 Z"/>
-    <path d="M83 56 L92 56 L92 70 L83 70 Z"/>
-    <path d="M70 72 L80 72 L80 80 L70 80 Z"/>
-    <path d="M18 77 C30 75 36 67 38 58" opacity=".7"/>
-    <path d="M132 77 C120 75 116 67 114 60" opacity=".7"/>
-  </svg>
-  <svg class="mono" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 87.06 80.47">  <path class="cls-2" d="M20.13,52.13c-.08-.15.06-.27.08-.39-.03.13.08.33-.08.39Z"/>  <g>    <g>      <path class="cls-2" d="M53.88,60.93c-.28-.05-.57-.05-.85,0-.88-.12-1.74-.32-2.53-.78-2.02-1.18-2.83-3.57-1.85-5.66-1.23-.37-1.66-1.65-1.19-2.78.68-1.65,2.78-2.74,4.31-3.47.45-.21.69-.66.76-1.07.16-.92-.68-1.68-1-1.42-.2.17-.3.42-.56.55-.58.3-1.45-.06-1.55-.76-.07-.5.34-.97.79-1.19,1.13-.55,2.56-.26,3.4.69.76.85,1,1.98.96,3.06l-.08.39c-.03.78-.31,1.56-.84,2.22,1.55.87,2.46,3.4,1.17,4.83-.38.42-.81.74-1.39.75.24-.64.25-1.71-.36-2.12-.56-.37-1.33-.49-1.92-.14-.72.43-1.04,1.23-1.08,2.02-.06,1.2.5,2.21,1.62,2.67.8.32,1.73.4,2.57.12,1.48-.48,2.54-2.06,3.11-3.45.67-1.64.94-3.43.84-5.2-.21-3.83-2.16-7.08-5.51-8.98.92-1.56.79-3.07.76-4.84,0-.2-.04-.41-.07-.63-.26-2.26-.82-4.43-1.5-6.58l-1.42,4.28-1.78,5.4-1.62,4.94-1.13,3.4c-.22-.89-.26-1.65-.32-2.47l-.06-.86-.05-1.74c-.02-.63-.15-1.39-.03-2.04l3.31-10.55c.56-1.8.85-4.75-1.47-5.22.08-.29.27-.43.43-.62.85-1.02,2.18-.92,3.28-.28.08-2.18,1.49-3.9,3.71-4.09.39-.03.76.1,1.19.23-2.42,3.83-1.83,9.47.24,13.28,1.25,2.29,3.05,4.14,5.6,4.8-.64,1.28-1.02,2.6-.92,3.95.18,2.3,1.75,4.19,3.98,4.67,1.3.28,2.76-.21,3.3-1.49.18-.43.15-.95-.2-1.29-.25-.25-.58-.36-.9-.46-.16.61-.72.95-1.27.89-.58-.07-1.07-.52-1.09-1.1-.04-.85.48-1.45,1.32-1.59,1.11-.18,2.35.15,3.13.97,1.67,1.75.94,5.27-1.29,6.36.62,1.23.69,2.95-.79,3.64-.04-.75-.35-1.31-.95-1.52-.64-.23-1.25.01-1.75.61-.04-.62-.1-1.24-.67-1.53s-1.36-.2-1.88.2c-.66.51-.63,1.56-.02,2.09.33.29.72.3,1.18.36-3.09,2.42-4.58,8.13-9.06,8.54ZM55.89,38.07v.54c0,.52-.05,1.03-.23,1.56,1.04.75,1.93,1.64,2.71,2.66.28.5,0-1.27.05-1.04-.15-.68.09-2.32.47-3-1.08-.38-1.73-.94-2.52-1.81-.25-.27-.38-.6-.71-.82.14.71.27,1.29.24,1.91Z"/>      <path class="cls-2" d="M53.88,60.93c-.26.02-.59.03-.85,0,.23-.13.62-.13.85,0Z"/>      <path class="cls-2" d="M54.5,48.5c0-.13-.05-.31.08-.39,0,.13.05.31-.08.39Z"/>      <path class="cls-2" d="M55.89,38.61v-.54c.13.12.13.42,0,.54Z"/>    </g>    <g>      <g>        <path class="cls-1" d="M45.08,23.63c-.07.25-.07.52,0,.77.1,1.55.41,3.07.89,4.58.05.16.26.4.2.6-.6,1.86-1.01,3.73-1.13,5.67l-.05.88c-.02.36-.09.68-.06,1-.02.07-.05.07-.08,0l-.04-.13v3.67s.04-.06.04-.06c.02-.07.05-.07.08,0v1.08l.08.46c.03.39-.08.8.08,1.16-.05.15-.06.31,0,.46-.03.28.05.54.07.85l.05.81c.08,1.33.19,2.66.63,3.93l.36,1.05c-.61,1.74-.89,3.48-.99,5.29-.03.51-.08,1.01-.01,1.51.08.62-.07.8.13,1.47-.06.12-.06.27,0,.39.1.78.16,1.56.25,2.37l.15,1.32c.04.37.13.7.12,1.1-.42.28-.78.65-1.08,1.07-.42.58-1.06,1.26-1.57,1.75-1.06,1.01-2.33,1.69-3.75,2.05-.59.15-1.14.21-1.73.28-2.12.25-4.29-.82-5.91-2.11-.44-.35-.91-.59-1.4-.85-1.22-.66-2.5-.62-3.67.18.64.58.74,1.64.04,2.23-.41.35-.97.54-1.51.4-1.31-.34-1.62-2.16-.95-3.15.86-1.26,2.24-1.93,3.75-2.12,1-.12,1.95.15,2.91.52l-.11-.76s-.21-1.94-.07-1.91c.9.19,2.34.96,2.63,1.85,1.01-.88,3.12-1.47,3.85-.26.29.47.25,1.01-.03,1.49s-.9.68-1.49.56c-.34-.07-.54-.42-.78-.72-.24.39-.17.82.01,1.21.88,1.95,3.68,1.25,4.91.21,1.47-1.25,2.12-3.5,2.22-5.36.09-1.55.08-3.08,0-4.64-.08-1.85-.46-3.58-.99-5.36.64-1.85.86-3.73,1.01-5.66.04-.53-.03-1.03.1-1.56l-.03-6.16-.08-1.49c-.11-2.06-.41-4.05-.99-6.02.73-2.43,1.6-5.88.57-8.21-.51-1.15-1.34-2.03-2.5-2.53-.39-.17-.8-.27-1.24-.1.27.83-.27,1.67-1.06,1.78l-.54.08c-.78-.19-1.3-.87-1.18-1.71.18-1.31,1.45-2.2,2.26-2.22l1.15-.02c1.68.37,2.59.93,3.84,2.02.23-1.15-.57-2.16-1.67-2.32-.22-.06-.42-.06-.62,0-.35,0-.13-.82.46-1.25.44-.32,1.02-.37,1.6-.22.1-1.33.93-2.17,1.37-3.39.39,1.2,1.16,2.21,1.31,3.4.61-.19,1.24-.1,1.76.3.35.27.55.71.54,1.14-.18.09-.32-.05-.49-.05-1.26.05-2.12,1.21-1.89,2.46,1.3-1.28,3.26-2.38,5.19-2.04,1.22.22,2.22,1.29,2.16,2.53-.03.68-.53,1.17-1.07,1.31-.61.17-1.25-.05-1.59-.56-.27-.4-.31-.82-.17-1.28-1.06-.29-2.29.65-2.9,1.38-.85,1.04-1.31,2.29-1.35,3.6Z"/>        <path class="cls-2" d="M44.92,39.92c-.02.07-.05.07-.08,0-.07-.67-.06-1.47,0-2.16.02-.07.05-.07.08,0v2.16Z"/>        <path class="cls-2" d="M45.08,24.4c-.13-.2-.13-.57,0-.77,0,.25-.02.52,0,.77Z"/>        <path class="cls-2" d="M44.92,40.62h-.08c-.06-.2-.07-.5,0-.7h.08v.7Z"/>        <path class="cls-2" d="M40.75,16.29h-.62c.16-.21.44-.03.62,0Z"/>        <path class="cls-2" d="M44.92,37.76h-.08c-.06-.17-.05-.44,0-.62h.08c.02.2,0,.41,0,.62Z"/>        <path class="cls-2" d="M36.89,20.46c-.17.02-.33.13-.54.08.12-.16.36-.05.54-.08Z"/>        <path class="cls-2" d="M45,42.16c-.14-.1-.08-.31-.08-.46.14.1.07.31.08.46Z"/>        <path class="cls-2" d="M41.75,42.32c-.13-.1-.13-.37,0-.46.02.13.02.33,0,.46Z"/>        <path class="cls-2" d="M45.08,43.79c-.13-.1-.13-.37,0-.46.02.12.02.33,0,.46Z"/>        <path class="cls-2" d="M41.45,45.87c.02-.13-.06-.31.08-.39.03.12.03.32-.08.39Z"/>        <path class="cls-2" d="M45.31,59.08c-.13-.08-.09-.44,0-.39.04.12-.03.27,0,.39Z"/>        <path class="cls-2" d="M44.84,37.14v2.78c0,.23.03.47,0,.7-.04.33.11.7-.09,1.04l.03-5.3c.14.27.02.54.06.78Z"/>      </g>      <g>        <path class="cls-2" d="M41.75,41.85c-.05.15-.05.31,0,.46-.03.18-.22,3.22-.23,3.17l-.08.39s0,1.12-.17,1.45l-3.23-9.71-2.81-8.45c-.83,2.59-1.49,5.32-1.59,7.99-.07.31-.07.69,0,1,0,.95.22,2.22.78,3.07-3.18,1.77-5.14,4.85-5.46,8.45-.24,2.72.33,5.81,2.15,7.91,1.1,1.28,2.43,1.69,4.06,1.25,1.07-.29,1.8-1.15,1.92-2.25.14-1.24-.57-2.75-1.88-2.76-.62,0-1.22.24-1.52.83-.26.51-.14,1.1.04,1.66-1.32-.09-2.09-1.55-2.01-2.63.1-1.24.73-2.28,1.78-2.97-1.3-1.69-1.28-4.8.53-6.08,1.19-.85,3.36-.75,3.7.61.11.44-.13.8-.46,1-.63.39-1.26.11-1.62-.48-.36-.17-.82.27-.96.62-.3.74-.05,1.6.71,1.91,1.56.64,2.44.96,3.64,2.16.71.71,1.08,1.64.8,2.63-.19.68-.66,1.22-1.36,1.43.33.69.43,1.36.42,2.03l-.08.39c-.05,1.06-.63,2-1.45,2.73-.92.81-2.07,1.17-3.26,1.29-.3-.05-.63-.05-.93,0-1.24-.19-2.34-.71-3.29-1.58-1.92-1.75-3.44-4.76-4.68-6.04l-.93-.95c.73.04,1.43-.3,1.55-.98.16-.86-.29-1.54-1.08-1.79-.72-.23-1.47.03-1.77.77-.1.26-.12.54-.17.86-.54-.61-1.36-.85-2.01-.41-.3.2-.53.53-.59.94l-.08.39c-.74-.18-1.16-.92-1.23-1.72-.05-.65.2-1.26.38-1.89-1.38-.77-2.14-2.11-2.26-3.64-.14-1.81.96-3.33,2.74-3.63,1.3-.22,2.33-.12,2.76,1.22l-.08.54c-.06.49-.56.86-1.07.89s-1.06-.32-1.22-.86c-.58.03-1.03.39-1.19.9-.04.18-.03.36,0,.54.22,1.03,1.23,1.75,2.34,1.83,1.26.09,2.44-.44,3.37-1.29,2.1-2.03,1.97-4.91.72-7.4,2.7-.66,4.47-2.67,5.67-4.97,1.98-3.86,2.5-9.28.12-13.1.46-.16.84-.26,1.27-.23,1.64.14,3.01,1.23,3.43,2.82.11.42.16.81.24,1.25,1.24-.8,2.97-.65,3.67.88-2.93.88-1.62,4.57-1,6.56l2.93,9.41c.17.53-.07,1.11.02,1.61ZM28.62,42.74c-.03.11.06.16.09.14l.1-.07c.99-.71,1.64-1.88,2.66-2.64-.38-1.35-.24-2.66.03-4.06-.62.82-1.22,1.56-2.05,2.1-.35.26-.71.45-1.15.58.49,1.26.63,2.59.31,3.96Z"/>        <path class="cls-2" d="M33.65,38.15c-.11.23-.11-1.23,0-1v1Z"/>        <path class="cls-2" d="M34.11,60.93c-.28.03-.65.04-.93,0-.2-.11,1.13-.11.93,0Z"/>        <path class="cls-2" d="M22.45,43.01c.03-.18-.08-.42.08-.54.06.2-.06.38-.08.54Z"/>        <path class="cls-2" d="M18.97,44.48c-.05-.24-.08-.3,0-.54v.54Z"/>        <path class="cls-2" d="M38.82,56.91c.01-.13-.06-.31.08-.39,0,.14,0,.28-.08.39Z"/>      </g>    </g>  </g></svg>
-  <p class="fnames">Manon &amp; Julien</p>
-  <p class="fdate">24 · 10 · 2026</p>
-  <p class="fhint">Nous avons hâte de vivre cette journée avec vous.</p>
-</footer>
-
-<script>
-(function(){
-  var d=new Date('2026-10-24T14:30:00'),el=document.getElementById('cd');
-  if(el){el.textContent=Math.max(0,Math.ceil((d.getTime()-Date.now())/86400000));}
-  var b=document.querySelector('.burger'),n=document.getElementById('navlinks');
-  if(b&&n){
-    b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});
-    n.addEventListener('click',function(e){if(e.target.tagName==='A')n.classList.remove('open');});
-  }
-})();
-</script>
+<footer class="foot">Manon &amp; Julien · 24 · 10 · 2026</footer>
 </body>
 </html>

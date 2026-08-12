@@ -1,0 +1,13 @@
+/* ===== Option A — « Gravure claire » : classique, papeterie, lumineux ===== */
+:root{
+  --bg:#FEEEE1; --surface:#FFF9F1; --alt:#F6E5D4;
+  --text:#312D0C; --text-2:#565019; --accent:#7A5F1E; --gold-line:#B58E33;
+  --line:rgba(49,45,12,.18);
+  --hero-img:url('/assets/img/couple-hero.jpg'); --hero-pos:center 56%;
+  --show-img:url('/assets/img/chateau-engraving.jpg'); --show-pos:center 46%;
+  --foot-bg:#3B3A14; --foot-text:#EFE7CF;
+}
+/* double liseret sur les cartes, esprit carton grave */
+.moment{position:relative;padding-top:clamp(30px,4vw,42px);}
+.moment::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);pointer-events:none;}
+.showcase-img{height:min(52vh,480px);}

@@ -1,0 +1,15 @@
+/* ===== Option B — « Immersive » : photographique, moderne, généreux ===== */
+:root{
+  --bg:#FBF3EA; --surface:#FFFFFF; --alt:#F1E5D6;
+  --text:#2C2A0F; --text-2:#54511F; --accent:#7A5F1E; --gold-line:#BE9438;
+  --line:rgba(44,42,15,.16);
+  --hero-img:url('/assets/img/chateau-courtyard.jpg'); --hero-pos:center 42%;
+  --hero-veil:linear-gradient(180deg,rgba(18,22,28,.36) 0%,rgba(18,22,28,.05) 34%,rgba(18,22,28,.26) 58%,rgba(10,12,16,.82) 100%);
+  --show-img:url('/assets/img/chateau-aerial.jpg'); --show-pos:center 52%;
+  --foot-bg:#26260B; --foot-text:#EFE7CF;
+}
+.band{padding:clamp(64px,9vw,112px) 0;}
+h2.title{font-size:clamp(2.1rem,4.6vw,3.2rem);}
+.hero .names{font-size:clamp(4rem,14vw,8.8rem);}
+.showcase-img{height:min(68vh,640px);}
+.moment{border:none;box-shadow:0 22px 46px -30px rgba(30,29,8,.42);}

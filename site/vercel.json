@@ -4,6 +4,9 @@
   "rewrites": [
     { "source": "/option1", "destination": "/option1.html" },
     { "source": "/option2", "destination": "/option2.html" },
-    { "source": "/option3", "destination": "/option3.html" }
+    { "source": "/option3", "destination": "/option3.html" },
+    { "source": "/option4", "destination": "/option4.html" },
+    { "source": "/option5", "destination": "/option5.html" },
+    { "source": "/option6", "destination": "/option6.html" }
   ]
 }

@@ -65,8 +65,8 @@ button{color:inherit}
 }
 .option-switcher a{
   display:grid;
-  width:32px;
-  height:32px;
+  width:30px;
+  height:30px;
   place-items:center;
   border-radius:50%;
   text-decoration:none;
@@ -83,8 +83,9 @@ button{color:inherit}
 .reveal.is-visible{opacity:1;transform:none}
 
 @media(max-width:600px){
-  .option-switcher{right:12px;bottom:12px}
+  .option-switcher{right:50%;bottom:12px;transform:translateX(50%)}
   .option-switcher span{display:none}
+  .option-switcher a{width:28px;height:28px}
 }
 
 @media(prefers-reduced-motion:reduce){
