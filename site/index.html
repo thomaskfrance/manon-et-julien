@@ -34,25 +34,34 @@ section{scroll-margin-top:70px;}
   .burger{display:block;}
 }
 
-/* ============ hero ============ */
-.hero{position:relative;min-height:calc(100vh - 56px);display:flex;flex-direction:column;
-  align-items:center;justify-content:flex-end;text-align:center;overflow:hidden;padding:0 24px 12vh;}
-.hero-photo{position:absolute;inset:0;background:url('/assets/img/couple.jpg') center 26%/cover no-repeat;}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,42,14,.24) 0%,rgba(43,42,14,0) 28%,rgba(43,42,14,.2) 55%,rgba(38,37,12,.82) 100%);}
-.hero .kicker{position:absolute;top:30px;left:0;right:0;color:#F0E6D2;font-size:.7rem;letter-spacing:.4em;
-  text-transform:uppercase;padding-left:.4em;text-shadow:0 1px 4px rgba(0,0,0,.5);}
-.hero .content{position:relative;color:#FBF4E4;}
-.hero .names{font-family:'Pinyon',cursive;font-weight:400;font-size:clamp(4rem,15vw,8.4rem);
-  line-height:.82;margin:0;filter:drop-shadow(0 2px 14px rgba(0,0,0,.45));}
-.hero .meta{display:flex;align-items:center;justify-content:center;gap:14px;margin:14px 0 0;color:#F5ECDC;
-  font-size:clamp(.9rem,2.4vw,1.1rem);letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.55);}
-.hero .meta i{width:5px;height:5px;border-radius:50%;background:var(--gold-light);display:inline-block;}
+/* ============ hero (mobile-first : immersif plein ecran) ============ */
+.hero{position:relative;min-height:calc(100vh - 56px);overflow:hidden;}
+.hero-media{position:absolute;inset:0;background:url('/assets/img/couple.jpg') center 50%/cover no-repeat;}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,42,14,.25) 0%,rgba(43,42,14,0) 30%,rgba(43,42,14,.2) 56%,rgba(38,37,12,.85) 100%);}
+.hero-panel{position:absolute;left:0;right:0;bottom:0;padding:0 24px 12vh;text-align:center;color:#FBF4E4;}
+.hero .kicker{color:#F0E6D2;font-size:.7rem;letter-spacing:.4em;text-transform:uppercase;padding-left:.4em;margin:0 0 .5rem;text-shadow:0 1px 4px rgba(0,0,0,.5);}
+.hero .names{font-family:'Pinyon',cursive;font-weight:400;font-size:clamp(3.6rem,12vw,7.4rem);line-height:1.06;margin:0;padding:.1em 0 .16em;filter:drop-shadow(0 2px 14px rgba(0,0,0,.45));}
+.hero .meta{display:flex;align-items:center;justify-content:center;gap:14px;margin:10px 0 0;color:#F5ECDC;font-size:clamp(.9rem,2.4vw,1.1rem);letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.55);}
+.hero .meta i{width:5px;height:5px;border-radius:50%;background:var(--gold-light);display:inline-block;flex:none;}
 .hero .place{font-style:italic;font-size:clamp(1rem,2.6vw,1.28rem);color:#F6EEDF;margin:11px 0 0;text-shadow:0 1px 6px rgba(0,0,0,.5);}
-.hero .cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#EFE4CC;
-  font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px;}
-.hero .cue span.arrow{width:14px;height:14px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
-  transform:rotate(45deg);animation:bob 2.2s ease-in-out infinite;}
+.hero .cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#EFE4CC;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px;}
+.hero .cue .arrow{width:13px;height:13px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);animation:bob 2.2s ease-in-out infinite;}
 @keyframes bob{0%,100%{transform:rotate(45deg) translate(0,0)}50%{transform:rotate(45deg) translate(3px,3px)}}
+
+/* ============ hero desktop : deux colonnes (texte + photo) ============ */
+@media(min-width:900px){
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;}
+  .hero-media{position:relative;inset:auto;order:2;height:100%;background-position:center 46%;}
+  .hero-veil{display:none;}
+  .hero-panel{position:relative;inset:auto;order:1;display:flex;flex-direction:column;justify-content:center;
+    align-items:flex-start;text-align:left;padding:6vh clamp(42px,5vw,76px);background:var(--beige);color:var(--olive-ink);}
+  .hero-panel .kicker{color:var(--gold-deep);text-shadow:none;}
+  .hero-panel .names{color:var(--olive);-webkit-text-fill-color:var(--olive);background:none;filter:none;font-size:clamp(3.4rem,6.4vw,5.6rem);}
+  .hero-panel .meta{justify-content:flex-start;color:var(--olive-ink);text-shadow:none;}
+  .hero-panel .meta i{background:var(--gold);}
+  .hero-panel .place{color:var(--olive-2);text-shadow:none;}
+  .hero .cue{display:none;}
+}
 
 /* ============ sections ============ */
 .band{padding:clamp(54px,8vw,92px) 0;}
@@ -141,10 +150,10 @@ h2.title{font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem);color:var(--olive);t
 </nav>
 
 <header class="hero">
-  <div class="hero-photo"></div>
+  <div class="hero-media"></div>
   <div class="hero-veil"></div>
-  <p class="kicker">Cérémonie religieuse</p>
-  <div class="content">
+  <div class="hero-panel">
+    <p class="kicker">Cérémonie religieuse</p>
     <h1 class="names gilded">Manon &amp; Julien</h1>
     <p class="meta"><span>24 octobre 2026</span><i></i><span>Touraine</span></p>
     <p class="place">Amboise · Château de La Bourdaisière</p>
