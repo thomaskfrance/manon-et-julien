@@ -8,8 +8,9 @@
 <link rel="stylesheet" href="/assets/css/base.css">
 <style>
 /* ============ base page ============ */
-body{font-size:18px;}
-.wrap{width:min(780px,100%);margin:0 auto;padding:0 24px;}
+html{font-size:18px;}
+body{font-size:1.13rem;line-height:1.66;}
+.wrap{width:min(800px,100%);margin:0 auto;padding:0 24px;}
 section{scroll-margin-top:70px;}
 
 /* ============ nav ============ */
@@ -21,7 +22,7 @@ section{scroll-margin-top:70px;}
 .brand .mono{width:28px;height:auto;}
 .brand b{font-weight:500;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;}
 .nav-links{display:flex;gap:4px;align-items:center;}
-.nav-links a{text-decoration:none;color:var(--olive-2);font-size:.72rem;letter-spacing:.13em;
+.nav-links a{text-decoration:none;color:var(--olive-2);font-size:.78rem;letter-spacing:.13em;
   text-transform:uppercase;padding:8px 12px;transition:color .2s;}
 .nav-links a:hover{color:var(--olive);}
 .burger{display:none;background:none;border:1px solid rgba(78,77,27,.35);color:var(--olive);
@@ -39,7 +40,8 @@ section{scroll-margin-top:70px;}
 .hero-media{position:absolute;inset:0;background:url('/assets/img/couple.jpg') center 50%/cover no-repeat;}
 .hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,42,14,.25) 0%,rgba(43,42,14,0) 30%,rgba(43,42,14,.2) 56%,rgba(38,37,12,.85) 100%);}
 .hero-panel{position:absolute;left:0;right:0;bottom:0;padding:0 24px 12vh;text-align:center;color:#FBF4E4;}
-.hero .kicker{color:#F0E6D2;font-size:.7rem;letter-spacing:.4em;text-transform:uppercase;padding-left:.4em;margin:0 0 .5rem;text-shadow:0 1px 4px rgba(0,0,0,.5);}
+.hero .lys{display:block;color:var(--gold-light);font-size:1.6rem;line-height:1;margin:0 0 10px;text-shadow:0 1px 4px rgba(0,0,0,.4);}
+.hero .kicker{color:#F0E6D2;font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;padding-left:.4em;margin:0 0 .5rem;text-shadow:0 1px 4px rgba(0,0,0,.5);}
 .hero .names{font-family:'Pinyon',cursive;font-weight:400;font-size:clamp(3.6rem,12vw,7.4rem);line-height:1.06;margin:0;padding:.1em 0 .16em;filter:drop-shadow(0 2px 14px rgba(0,0,0,.45));}
 .hero .meta{display:flex;align-items:center;justify-content:center;gap:14px;margin:10px 0 0;color:#F5ECDC;font-size:clamp(.9rem,2.4vw,1.1rem);letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 6px rgba(0,0,0,.55);}
 .hero .meta i{width:5px;height:5px;border-radius:50%;background:var(--gold-light);display:inline-block;flex:none;}
@@ -48,15 +50,19 @@ section{scroll-margin-top:70px;}
 .hero .cue .arrow{width:13px;height:13px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);animation:bob 2.2s ease-in-out infinite;}
 @keyframes bob{0%,100%{transform:rotate(45deg) translate(0,0)}50%{transform:rotate(45deg) translate(3px,3px)}}
 
-/* ============ hero desktop : deux colonnes (texte + photo) ============ */
+/* ============ hero desktop : photo encadree a gauche, texte a droite ============ */
 @media(min-width:900px){
-  .hero{display:grid;grid-template-columns:1.05fr .95fr;}
-  .hero-media{position:relative;inset:auto;order:2;height:100%;background-position:center 46%;}
+  .hero{display:grid;grid-template-columns:.92fr 1.08fr;background:var(--beige);align-items:stretch;}
+  .hero-media{position:relative;inset:auto;order:1;height:auto;
+    margin:7vh 2vw 7vh clamp(28px,5vw,68px);background-position:center 45%;
+    border:1px solid var(--olive);box-shadow:0 34px 66px -42px rgba(59,58,20,.62);}
+  .hero-media::before{content:"";position:absolute;inset:9px;border:1px solid rgba(169,133,47,.6);pointer-events:none;}
   .hero-veil{display:none;}
-  .hero-panel{position:relative;inset:auto;order:1;display:flex;flex-direction:column;justify-content:center;
-    align-items:flex-start;text-align:left;padding:6vh clamp(42px,5vw,76px);background:var(--beige);color:var(--olive-ink);}
+  .hero-panel{position:relative;inset:auto;order:2;display:flex;flex-direction:column;justify-content:center;
+    align-items:flex-start;text-align:left;padding:6vh clamp(40px,5vw,74px) 6vh clamp(28px,3vw,48px);background:transparent;color:var(--olive-ink);}
+  .hero-panel .lys{color:var(--gold-deep);text-shadow:none;font-size:1.7rem;}
   .hero-panel .kicker{color:var(--gold-deep);text-shadow:none;}
-  .hero-panel .names{color:var(--olive);-webkit-text-fill-color:var(--olive);background:none;filter:none;font-size:clamp(3.4rem,6.4vw,5.6rem);}
+  .hero-panel .names{color:var(--olive);-webkit-text-fill-color:var(--olive);background:none;filter:none;font-size:clamp(3.4rem,6vw,5.4rem);}
   .hero-panel .meta{justify-content:flex-start;color:var(--olive-ink);text-shadow:none;}
   .hero-panel .meta i{background:var(--gold);}
   .hero-panel .place{color:var(--olive-2);text-shadow:none;}
@@ -68,9 +74,10 @@ section{scroll-margin-top:70px;}
 .band.warm{background:var(--beige-warm);}
 .eyebrow{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-deep);
   text-align:center;margin:0 0 .6rem;padding-left:.34em;}
-h2.title{font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem);color:var(--olive);text-align:center;margin:0;line-height:1.15;text-wrap:balance;}
-.divider{width:64px;height:1px;background:var(--gold);margin:20px auto 0;opacity:.7;}
-.lead{text-align:center;max-width:52ch;margin:16px auto 0;color:var(--ink);}
+h2.title{font-weight:500;font-size:clamp(1.9rem,4vw,2.7rem);color:var(--olive);text-align:center;margin:0;line-height:1.15;text-wrap:balance;}
+h2.title::after{content:"\269C\FE0E";display:block;color:var(--gold);font-size:1.2rem;line-height:1;margin-top:16px;}
+.lys{color:var(--gold);}
+.lead{text-align:center;max-width:54ch;margin:16px auto 0;color:var(--ink);font-size:1.08rem;}
 .count{text-align:center;margin-top:26px;}
 .count b{display:block;font-size:2.4rem;color:var(--olive);font-weight:600;line-height:1;font-variant-numeric:tabular-nums;}
 .count span{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--olive-2);}
@@ -80,7 +87,7 @@ h2.title{font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem);color:var(--olive);t
 .moment{background:var(--beige);border:1px solid rgba(78,77,27,.2);padding:clamp(24px,4vw,36px);}
 .band.warm .moment{background:#FFFAF3;}
 .moment .time{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 .3rem;}
-.moment h3{font-weight:500;font-size:1.4rem;color:var(--olive);margin:0 0 .5rem;}
+.moment h3{font-weight:500;font-size:1.55rem;color:var(--olive);margin:0 0 .5rem;}
 .moment p{margin:.4rem 0;}
 .moment .sub{color:var(--olive-2);font-style:italic;}
 .moment .muted{color:var(--olive-2);}
@@ -93,7 +100,7 @@ h2.title{font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem);color:var(--olive);t
 .faq details{border-bottom:1px solid rgba(78,77,27,.18);}
 .faq details:first-child{border-top:1px solid rgba(78,77,27,.18);}
 .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;
-  padding:16px 2px;color:var(--olive);font-size:.98rem;font-weight:500;}
+  padding:17px 2px;color:var(--olive);font-size:1.06rem;font-weight:500;}
 .faq summary::-webkit-details-marker{display:none;}
 .faq summary::after{content:"+";font-size:1.25rem;line-height:1;color:var(--gold-deep);flex:none;font-weight:400;}
 .faq details[open] summary::after{content:"\2212";}
@@ -153,6 +160,7 @@ h2.title{font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem);color:var(--olive);t
   <div class="hero-media"></div>
   <div class="hero-veil"></div>
   <div class="hero-panel">
+    <span class="lys" aria-hidden="true">&#9884;&#65038;</span>
     <p class="kicker">Cérémonie religieuse</p>
     <h1 class="names gilded">Manon &amp; Julien</h1>
     <p class="meta"><span>24 octobre 2026</span><i></i><span>Touraine</span></p>
@@ -165,7 +173,6 @@ h2.title{font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem);color:var(--olive);t
   <div class="wrap center">
     <p class="eyebrow">Nous nous marions</p>
     <h2 class="title">Au cœur de la Touraine</h2>
-    <div class="divider"></div>
     <p class="lead">Nous avons la joie de vous convier à célébrer notre mariage. Retrouvez ici le programme du jour J et toutes les informations pratiques pour nous rejoindre.</p>
     <p class="count"><b id="cd">—</b><span>jours avant le oui</span></p>
   </div>
