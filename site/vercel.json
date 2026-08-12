@@ -1,4 +1,9 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/option1", "destination": "/option1.html" },
+    { "source": "/option2", "destination": "/option2.html" },
+    { "source": "/option3", "destination": "/option3.html" }
+  ]
 }

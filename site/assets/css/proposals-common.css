@@ -1,0 +1,94 @@
+@font-face{
+  font-family:"MJ Garamond";
+  src:url("/assets/fonts/EBGaramond.ttf") format("truetype");
+  font-style:normal;
+  font-weight:400 700;
+  font-display:swap;
+}
+@font-face{
+  font-family:"MJ Garamond";
+  src:url("/assets/fonts/EBGaramond-Italic.ttf") format("truetype");
+  font-style:italic;
+  font-weight:400 700;
+  font-display:swap;
+}
+@font-face{
+  font-family:"MJ Script";
+  src:url("/assets/fonts/PinyonScript.ttf") format("truetype");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0}
+body,button{font-family:"MJ Garamond",Georgia,serif}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{color:inherit}
+[hidden]{display:none!important}
+
+.skip-link{
+  position:fixed;
+  z-index:1000;
+  top:12px;
+  left:12px;
+  padding:10px 14px;
+  background:#fff;
+  color:#1f1f15;
+  transform:translateY(-180%);
+}
+.skip-link:focus{transform:none}
+
+.option-switcher{
+  position:fixed;
+  z-index:90;
+  right:18px;
+  bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:4px;
+  padding:5px;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:999px;
+  background:rgba(29,29,19,.82);
+  color:#fff8ea;
+  box-shadow:0 16px 45px rgba(0,0,0,.22);
+  backdrop-filter:blur(12px);
+}
+.option-switcher span{
+  padding:0 7px 0 10px;
+  font:600 10px/1 Arial,sans-serif;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.option-switcher a{
+  display:grid;
+  width:32px;
+  height:32px;
+  place-items:center;
+  border-radius:50%;
+  text-decoration:none;
+  font:700 12px/1 Arial,sans-serif;
+}
+.option-switcher a:hover,.option-switcher a:focus-visible{background:rgba(255,255,255,.16)}
+.option-switcher a[aria-current="page"]{background:#dcab00;color:#2b2b16}
+
+.reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .75s ease,transform .75s ease;
+}
+.reveal.is-visible{opacity:1;transform:none}
+
+@media(max-width:600px){
+  .option-switcher{right:12px;bottom:12px}
+  .option-switcher span{display:none}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .reveal{opacity:1;transform:none}
+}
