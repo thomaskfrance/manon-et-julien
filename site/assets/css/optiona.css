@@ -12,7 +12,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 
 /* ---- « & » redessine : Garamond italique, defini ---- */
 .amp{font-family:var(--serif);font-style:italic;font-weight:600;}
-.names .amp{display:inline-block;margin:0 .12em;font-size:.5em;vertical-align:.08em;color:var(--gold-line);}
+.names .amp{display:inline-block;margin:0;font-size:.5em;vertical-align:.08em;color:var(--gold-line);}
 .hero .names .amp{color:#E7C46A;}
 
 /* ---- HERO : lignes de lieu ---- */
@@ -104,7 +104,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .site-foot .foot-mono{width:clamp(96px,13vw,148px);margin:0 auto 20px;}
 .site-foot .foot-mono .mono{width:100%;height:auto;}
 .site-foot .fnames{font-family:var(--script);font-size:clamp(2.8rem,7vw,3.8rem);}
-.site-foot .fnames .amp{font-family:var(--serif);font-style:italic;font-weight:600;font-size:.44em;color:var(--foot-text);margin:0 .14em;vertical-align:.06em;}
+.site-foot .fnames .amp{font-family:var(--serif);font-style:italic;font-weight:600;font-size:.44em;color:var(--foot-text);margin:0;vertical-align:.06em;}
 .site-foot .fdate{letter-spacing:.34em;}
 
 /* ===== Épuration typographique (retour mariés : trop de gras/italique/couleurs) =====
