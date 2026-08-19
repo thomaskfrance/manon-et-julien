@@ -33,10 +33,11 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .countdown .sep{color:var(--gold-line);font-size:1rem;margin-top:.7rem;}
 
 /* ---- Cadre delicat autour des photos (double filet olive + or) ---- */
-.framed{position:relative;margin:0;padding:9px;background:var(--surface);border:1px solid var(--olive);}
-.framed::before{content:"";position:absolute;inset:4px;border:1px solid var(--gold-line);pointer-events:none;z-index:2;}
+.framed{margin:0;}
+.frame-in{position:relative;display:block;padding:9px;background:var(--surface);border:1px solid var(--olive);}
+.frame-in::before{content:"";position:absolute;inset:4px;border:1px solid var(--gold-line);pointer-events:none;z-index:2;}
 .framed img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
-.framed figcaption{margin-top:10px;text-align:center;font-style:italic;color:var(--text-2);font-size:.92rem;}
+.framed figcaption{margin-top:12px;text-align:center;color:var(--text-2);font-size:.9rem;}
 
 /* ---- Jour J : deux colonnes texte + photo ---- */
 .moment.split{display:grid;grid-template-columns:1fr .92fr;gap:clamp(22px,4vw,46px);align-items:center;background:none;border:0;padding:0;}
@@ -63,12 +64,12 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 @media(max-width:680px){.lieu-gallery{grid-template-columns:1fr;max-width:360px;}}
 
 /* ---- Code vestimentaire (façon option 4) ---- */
-.attire{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(18px,4vw,44px);margin-top:32px;}
+.attire{display:grid;grid-template-columns:1fr auto 1fr;align-items:start;gap:clamp(18px,4vw,44px);margin-top:32px;}
 .attire article{text-align:center;}
 .attire article span{display:block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.5rem;}
 .attire article h4{font-family:var(--script);font-weight:400;font-size:clamp(1.8rem,4vw,2.5rem);color:var(--olive);line-height:1.05;margin:0;}
 .attire article p{margin:.5rem 0 0;color:var(--text-2);font-style:italic;}
-.attire-mono{width:clamp(72px,10vw,116px);}
+.attire-mono{width:clamp(72px,10vw,116px);align-self:center;}
 .attire-mono .mono{width:100%;height:auto;}
 @media(max-width:640px){
   .attire{grid-template-columns:1fr;gap:24px;}
@@ -84,14 +85,18 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .liste-band{background:var(--olive-block);color:#F4EEDA;}
 .liste-inner{width:min(1080px,100%);margin:0 auto;padding:clamp(48px,7vw,86px) 24px;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(26px,4vw,52px);align-items:center;}
 @media(max-width:820px){.liste-inner{grid-template-columns:1fr;}}
-.liste-card .eyebrow.light{color:#E7C778;}
+.liste-card{text-align:left;}
+.liste-card .eyebrow.light{color:#E7C778;text-align:left;}
 .liste-card .title.light{color:#F7F0DB;text-align:left;}
-.liste-card .title.light::after{margin:16px 0 0;color:#E7C778;}
+.liste-card .title.light::after{content:none;}
 .liste-card p{color:#E9E1C6;margin:2px 0 0;}
-.cta-btn.gold{background:var(--gold-line);color:#23230A;border-color:var(--gold-line);margin-top:24px;}
-.cta-btn.gold:hover,.cta-btn.gold:focus-visible{background:transparent;color:#F7F0DB;}
-.framed.light{background:rgba(255,255,255,.05);border-color:#CBA24B;}
-.framed.light::before{border-color:rgba(247,240,219,.4);}
+.cta-btn.gold{background:#F4EEDA;color:#3B3A14;border-color:#F4EEDA;margin-top:24px;}
+.cta-btn.gold:hover,.cta-btn.gold:focus-visible{background:transparent;color:#F7F0DB;border-color:#F4EEDA;}
+@media(max-width:820px){
+  .liste-inner .cta-btn.gold{display:block;width:100%;text-align:center;}
+}
+.framed.light .frame-in{background:rgba(255,255,255,.05);border-color:#CBA24B;}
+.framed.light .frame-in::before{border-color:rgba(247,240,219,.4);}
 .framed.light figcaption{color:#E9E1C6;}
 .framed.light img{aspect-ratio:4/5;}
 
