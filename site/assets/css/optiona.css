@@ -20,15 +20,15 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .hero-date{color:#F3E9CF;letter-spacing:.3em;text-transform:uppercase;font-size:clamp(.85rem,2.2vw,1.05rem);margin:.5rem 0 0;text-shadow:0 1px 6px rgba(0,0,0,.7);}
 .venues{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 20px;margin:18px 0 0;}
 .venues > span:not(.lys){display:flex;flex-direction:column;gap:3px;}
-.venues b{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#F3E9CF;font-weight:600;text-shadow:0 1px 5px rgba(0,0,0,.75);}
-.venues i{font-style:italic;font-size:1.05rem;color:#FBF4E4;text-shadow:0 1px 6px rgba(0,0,0,.7);}
+.venues .lbl{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#EFE4CC;font-weight:600;text-shadow:0 1px 5px rgba(0,0,0,.75);}
+.venues .val{font-style:normal;font-size:1.05rem;color:#FBF4E4;text-shadow:0 1px 6px rgba(0,0,0,.7);}
 .venues .lys{color:#E7C46A;font-size:1.1rem;text-shadow:0 1px 5px rgba(0,0,0,.6);}
 @media(max-width:560px){.venues{flex-direction:column;gap:2px;}.venues .lys{display:none;}}
 
 /* ---- Decompte ---- */
 .countdown{display:inline-flex;align-items:flex-start;gap:clamp(14px,4vw,34px);margin-top:30px;}
 .countdown > div{display:flex;flex-direction:column;align-items:center;min-width:62px;}
-.countdown b{font-size:clamp(2.2rem,6vw,3.2rem);font-weight:700;color:var(--olive);line-height:1;font-variant-numeric:tabular-nums;}
+.countdown .cd-num{font-size:clamp(2.2rem,6vw,3.2rem);font-weight:700;color:var(--olive);line-height:1;font-variant-numeric:tabular-nums;}
 .countdown span{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--text-2);margin-top:9px;}
 .countdown .sep{color:var(--gold-line);font-size:1rem;margin-top:.7rem;}
 
@@ -101,3 +101,18 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .site-foot .fnames{font-family:var(--script);font-size:clamp(2.8rem,7vw,3.8rem);}
 .site-foot .fnames .amp{font-family:var(--serif);font-style:italic;font-weight:600;font-size:.44em;color:var(--foot-text);margin:0 .14em;vertical-align:.06em;}
 .site-foot .fdate{letter-spacing:.34em;}
+
+/* ===== Épuration typographique (retour mariés : trop de gras/italique/couleurs) =====
+   - Calligraphie Pinyon réservée AUX PRÉNOMS uniquement
+   - Aucun italique dans le corps ; libellés dans une seule teinte sobre
+   - Doré réservé à la fleur de lys, aux filets et aux liens */
+.eyebrow{color:var(--text-2);font-weight:600;}
+.moment .time{color:var(--text-2);}
+.attire article span{color:var(--text-2);}
+.muted,.faq .acc .muted,.moment .sub,.framed figcaption,.attire article p,.dress-note,.lieu-txt .muted{font-style:normal;}
+.framed figcaption{color:var(--text-2);font-size:.9rem;}
+.moment .sub,.dress-note,.attire article p{color:var(--text-2);}
+.lead{color:var(--text);}
+/* sous-titres de section en Garamond (plus de calligraphie hors prénoms) */
+.attire article h4{font-family:var(--serif);font-weight:600;font-size:1.5rem;line-height:1.2;text-transform:none;letter-spacing:0;}
+.liste-card .eyebrow.light{color:#E9E1C6;}
