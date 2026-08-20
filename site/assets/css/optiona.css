@@ -11,8 +11,9 @@
 h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;color:var(--gold-line);font-size:1.15rem;line-height:1;margin-top:14px;}
 
 /* ---- « & » redessine : Garamond italique, defini ---- */
-.amp{font-family:'Pinyon',cursive;font-style:normal;font-weight:400;}
-.names .amp{display:inline-block;margin:0;font-size:1em;vertical-align:0;color:var(--gold-line);}
+@font-face{font-family:'GreatVibes';src:url('/assets/fonts/GreatVibes.ttf') format('truetype');font-display:swap;}
+.amp{font-family:'GreatVibes',cursive;font-style:normal;font-weight:400;}
+.names .amp{display:inline-block;margin:0;font-size:.72em;vertical-align:.02em;color:var(--gold-line);}
 .hero .names .amp{color:#E7C46A;}
 
 /* ---- HERO : lignes de lieu ---- */
@@ -104,7 +105,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .site-foot .foot-mono{width:clamp(96px,13vw,148px);margin:0 auto 20px;}
 .site-foot .foot-mono .mono{width:100%;height:auto;}
 .site-foot .fnames{font-family:var(--script);font-size:clamp(2.8rem,7vw,3.8rem);}
-.site-foot .fnames .amp{font-family:'Pinyon',cursive;font-style:normal;font-weight:400;font-size:.92em;color:var(--foot-text);margin:0;vertical-align:0;}
+.site-foot .fnames .amp{font-family:'GreatVibes',cursive;font-style:normal;font-weight:400;font-size:.72em;color:var(--foot-text);margin:0;vertical-align:.02em;}
 .site-foot .fdate{letter-spacing:.34em;}
 
 /* ===== Épuration typographique (retour mariés : trop de gras/italique/couleurs) =====
