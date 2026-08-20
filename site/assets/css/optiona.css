@@ -11,6 +11,7 @@
 .hero{justify-content:flex-start;padding:clamp(52px,9vh,120px) 24px clamp(84px,13vh,150px);}
 .hero-inner{flex:1 1 auto;width:100%;display:flex;flex-direction:column;justify-content:space-between;align-items:center;}
 .hero-foot{display:flex;flex-direction:column;align-items:center;}
+@media(max-width:760px){.hero{padding-top:clamp(96px,17vh,150px);}}
 
 /* ---- DA faire-part : fleur de lys comme separateur de titre ---- */
 h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;color:var(--gold-line);font-size:1.15rem;line-height:1;margin-top:14px;}
