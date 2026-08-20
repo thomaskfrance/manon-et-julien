@@ -13,6 +13,10 @@
 .hero-foot{display:flex;flex-direction:column;align-items:center;}
 @media(max-width:760px){.hero{padding-top:clamp(96px,17vh,150px);}}
 
+/* logo du menu bien plus grand, sans agrandir le bandeau (marges réduites d'autant) */
+.topnav .bar{padding-top:4px;padding-bottom:4px;}
+.brand .mono{width:46px;}
+
 /* ---- DA faire-part : fleur de lys comme separateur de titre ---- */
 h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;color:var(--gold-line);font-size:1.15rem;line-height:1;margin-top:14px;}
 
