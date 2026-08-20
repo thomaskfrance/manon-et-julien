@@ -5,7 +5,10 @@
   --show-img:url('/assets/img/chateau-aerial.jpg'); --show-pos:center 50%;
   --foot-bg:#3B3A14; --foot-text:#EFE7CF;
   --olive-block:#4E4D1B;
+  --hero-veil:linear-gradient(180deg,rgba(26,25,7,.62) 0%,rgba(26,25,7,.40) 24%,rgba(26,25,7,.12) 46%,rgba(26,25,7,.06) 64%,rgba(22,21,5,.5) 100%);
 }
+/* titre bien plus haut dans le hero (au-dessus du couple) */
+.hero{justify-content:flex-start;padding:clamp(64px,14vh,170px) 24px 12vh;}
 
 /* ---- DA faire-part : fleur de lys comme separateur de titre ---- */
 h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;color:var(--gold-line);font-size:1.15rem;line-height:1;margin-top:14px;}
