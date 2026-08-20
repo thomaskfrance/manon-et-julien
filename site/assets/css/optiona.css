@@ -17,6 +17,15 @@
 .topnav .bar{padding-top:2px;padding-bottom:2px;}
 .brand .mono{width:54px;}
 
+/* desktop : blocs Cérémonie / Festivités écartés aux extrémités (dans l'herbe, hors du couple) */
+@media(min-width:900px){
+  .hero-foot{width:100%;}
+  .venues{width:100%;max-width:1180px;margin:18px auto 0;justify-content:space-between;gap:0 24px;flex-wrap:nowrap;}
+  .venues .lys{display:none;}
+  .venues .v:first-child{align-items:flex-start;text-align:left;}
+  .venues .v:last-child{align-items:flex-end;text-align:right;}
+}
+
 /* ---- DA faire-part : fleur de lys comme separateur de titre ---- */
 h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;color:var(--gold-line);font-size:1.15rem;line-height:1;margin-top:14px;}
 
