@@ -35,7 +35,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 @font-face{font-family:'GreatVibes';src:url('/assets/fonts/GreatVibes.ttf') format('truetype');font-display:swap;}
 .amp{font-family:var(--serif);font-style:normal;font-weight:400;}
 .names .amp{display:inline-block;margin:0;font-size:.5em;vertical-align:.08em;color:var(--gold-line);}
-.hero .names .amp{color:#E7C46A;}
+.hero .names .amp{color:var(--gold-line);}
 
 /* ---- HERO : lignes de lieu ---- */
 .hero .names{padding:.06em 0 .12em;}
@@ -48,7 +48,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 @media(min-width:900px){
   .hero-foot{width:100%;}
   .venues{display:grid;width:min(1100px,calc(100vw - 96px));grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:start;gap:clamp(32px,5vw,80px);}
-  .venues .lbl{font-size:1rem;}
+  .venues .lbl{font-size:1.18rem;}
   .venues .val,.venues .date-v .lys{font-size:1.12rem;}
   .venues .v:first-child{align-items:flex-start;text-align:left;}
   .venues .date-v{align-items:center;text-align:center;justify-self:center;}
