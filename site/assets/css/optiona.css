@@ -1,7 +1,7 @@
 /* ===== Option A — « Gravure claire » : site final (retours mariés) ===== */
 :root{
   --bg:#FEEEE1; --surface:#FFF9F1; --alt:#F6E5D4;
-  --hero-img:url('/assets/img/couple-hero-boost-bis.jpg'); --hero-pos:center 50%;
+  --hero-img:url('/assets/img/couple-hero-boost.jpg'); --hero-pos:center 52%;
   --show-img:url('/assets/img/chateau-aerial.jpg'); --show-pos:center 50%;
   --foot-bg:#3B3A14; --foot-text:#EFE7CF;
   --olive-block:#4E4D1B;
