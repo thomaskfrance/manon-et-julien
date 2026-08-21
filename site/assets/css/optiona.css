@@ -49,8 +49,9 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 @media(min-width:900px){
   .hero-foot{width:100%;}
   .venues{display:grid;width:min(1100px,calc(100vw - 96px));grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:start;gap:clamp(32px,5vw,80px);}
-  .venues .lbl{font-size:1.18rem;}
+  .venues .lbl{font-size:1.18rem;color:#FFFFFF;}
   .venues .val,.venues .date-v .lys{font-size:1.12rem;}
+  .venues .val{color:var(--gold-line);}
   .venues .v:first-child{align-items:flex-start;text-align:left;}
   .venues .date-v{align-items:center;text-align:center;justify-self:center;}
   .venues .v:last-child{align-items:flex-end;text-align:right;}
