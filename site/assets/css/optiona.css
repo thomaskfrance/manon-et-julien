@@ -44,7 +44,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .venues .lbl{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:#E7C46A;font-weight:600;text-shadow:0 1px 5px rgba(0,0,0,.75);}
 .venues .val,.venues .lys{font-size:1.05rem;line-height:1.25;}
 .venues .val{font-style:normal;color:#FBF4E4;text-shadow:0 1px 6px rgba(0,0,0,.7);}
-.venues .lys{display:flex;min-height:1.3125rem;align-items:center;justify-content:center;color:#E7C46A;text-shadow:0 1px 5px rgba(0,0,0,.6);}
+.venues .lys{display:flex;min-height:1.3125rem;align-items:center;justify-content:center;color:#FFFFFF;text-shadow:0 1px 5px rgba(0,0,0,.6);}
 @media(min-width:900px){
   .hero-foot{width:100%;}
   .venues{display:grid;width:min(1100px,calc(100vw - 96px));grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:start;gap:clamp(32px,5vw,80px);}
