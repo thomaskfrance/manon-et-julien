@@ -123,7 +123,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .framed.light img{aspect-ratio:4/5;}
 
 /* ---- Bloc de fin ---- */
-.site-foot .foot-mono{width:clamp(96px,13vw,148px);margin:0 auto 20px;}
+.site-foot .foot-mono{width:clamp(96px,13vw,148px);margin:0 auto 4px;}
 .site-foot .foot-mono .mono{width:100%;height:auto;}
 .site-foot .fnames{font-family:var(--script);font-size:clamp(2.8rem,7vw,3.8rem);}
 .site-foot .fnames .amp{font-family:'GreatVibes',cursive;font-style:normal;font-weight:400;font-size:.72em;color:var(--foot-text);margin:0;vertical-align:.02em;}
