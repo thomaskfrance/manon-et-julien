@@ -96,6 +96,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
   .attire-mono{order:0;margin:0 auto;}
 }
 .palette{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 18px;margin:clamp(28px,3.6vw,42px) auto 0;max-width:760px;}
+@media(max-width:640px){.palette{margin-top:46px;}}
 .palette i{display:flex;flex-direction:column;align-items:center;gap:9px;width:72px;}
 .palette i::before{content:"";width:34px;height:34px;border-radius:50%;background:var(--c);border:1px solid rgba(0,0,0,.22);box-shadow:inset 0 0 0 2px rgba(255,255,255,.35);}
 .palette i span{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);}
