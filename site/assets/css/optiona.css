@@ -42,6 +42,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .venues{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 20px;margin:18px 0 0;}
 .venues > .v{display:flex;flex-direction:column;gap:3px;}
 .venues .lbl{font-size:.75rem;letter-spacing:.17em;text-transform:uppercase;color:var(--gold-line);font-weight:600;text-shadow:0 1px 5px rgba(0,0,0,.75);}
+.venues .date-v .lbl{color:#FFFFFF;}
 .venues .val,.venues .lys{font-size:1.05rem;line-height:1.25;}
 .venues .val{font-style:normal;color:#FBF4E4;text-shadow:0 1px 6px rgba(0,0,0,.7);}
 .venues .lys{display:flex;min-height:1.3125rem;align-items:center;justify-content:center;color:#FFFFFF;text-shadow:0 1px 5px rgba(0,0,0,.6);}
@@ -58,6 +59,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
   .venues{flex-direction:column;gap:8px;}
   .venues .v{align-items:center;text-align:center;}
   .venues .date-v{order:-1;gap:0;margin-bottom:-6px;}
+  .venues .date-v .lbl{font-size:1.02rem;}
   .venues .date-v .lys{min-height:0;line-height:1;margin-top:-2px;}
 }
 
