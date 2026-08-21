@@ -37,13 +37,25 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 
 /* ---- HERO : lignes de lieu ---- */
 .hero .names{padding:.06em 0 .12em;}
-.hero-date{color:#F3E9CF;letter-spacing:.3em;text-transform:uppercase;font-size:clamp(.85rem,2.2vw,1.05rem);margin:.5rem 0 0;text-shadow:0 1px 6px rgba(0,0,0,.7);}
 .venues{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 20px;margin:18px 0 0;}
-.venues > span:not(.lys){display:flex;flex-direction:column;gap:3px;}
-.venues .lbl{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:#EFE4CC;font-weight:600;text-shadow:0 1px 5px rgba(0,0,0,.75);}
-.venues .val{font-style:normal;font-size:1.05rem;color:#FBF4E4;text-shadow:0 1px 6px rgba(0,0,0,.7);}
-.venues .lys{color:#E7C46A;font-size:1.1rem;text-shadow:0 1px 5px rgba(0,0,0,.6);}
-@media(max-width:560px){.venues{flex-direction:column;gap:2px;}.venues .lys{display:none;}}
+.venues > .v{display:flex;flex-direction:column;gap:3px;}
+.venues .lbl{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:#EFE4CC;font-weight:600;text-shadow:0 1px 5px rgba(0,0,0,.75);}
+.venues .val,.venues .lys{font-size:1.05rem;line-height:1.25;}
+.venues .val{font-style:normal;color:#FBF4E4;text-shadow:0 1px 6px rgba(0,0,0,.7);}
+.venues .lys{display:flex;min-height:1.3125rem;align-items:center;justify-content:center;color:#E7C46A;text-shadow:0 1px 5px rgba(0,0,0,.6);}
+@media(min-width:900px){
+  .hero-foot{width:100%;}
+  .venues{display:grid;width:min(1100px,calc(100vw - 96px));grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:start;gap:clamp(32px,5vw,80px);}
+  .venues .lbl{font-size:.9rem;}
+  .venues .v:first-child{align-items:flex-start;text-align:left;}
+  .venues .date-v{align-items:center;text-align:center;justify-self:center;}
+  .venues .v:last-child{align-items:flex-end;text-align:right;}
+}
+@media(max-width:560px){
+  .venues{flex-direction:column;gap:10px;}
+  .venues .v{align-items:center;text-align:center;}
+  .venues .date-v{order:-1;margin-bottom:4px;}
+}
 
 /* ---- Decompte ---- */
 .countdown{display:inline-flex;align-items:flex-start;gap:clamp(14px,4vw,34px);margin-top:30px;}
