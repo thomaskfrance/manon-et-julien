@@ -12,6 +12,8 @@
 .hero-inner{flex:1 1 auto;width:100%;display:flex;flex-direction:column;justify-content:space-between;align-items:center;}
 .hero-foot{display:flex;flex-direction:column;align-items:center;}
 @media(max-width:760px){.hero{padding-top:clamp(96px,17vh,150px);}}
+/* photo hero specifique mobile (plus d'herbe sous le couple, moins de ciel) */
+@media(max-width:760px){.hero-media{background-image:url('/assets/img/couple-hero-boost-bis.jpg');}}
 
 /* menu : logo agrandi (déborde légèrement, bandeau inchangé), titre plus gros/gras, liens colorés */
 .topnav .bar{padding-top:2px;padding-bottom:2px;}
