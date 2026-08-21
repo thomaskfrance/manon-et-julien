@@ -55,9 +55,10 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
   .venues .v:last-child{align-items:flex-end;text-align:right;}
 }
 @media(max-width:560px){
-  .venues{flex-direction:column;gap:10px;}
+  .venues{flex-direction:column;gap:8px;}
   .venues .v{align-items:center;text-align:center;}
-  .venues .date-v{order:-1;margin-bottom:-4px;}
+  .venues .date-v{order:-1;gap:0;margin-bottom:-6px;}
+  .venues .date-v .lys{min-height:0;line-height:1;margin-top:-2px;}
 }
 
 /* ---- Decompte ---- */
