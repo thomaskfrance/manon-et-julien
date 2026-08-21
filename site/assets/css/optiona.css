@@ -113,7 +113,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .liste-card p{color:#E9E1C6;margin:0;}
 .liste-card .eyebrow.light{margin:0;}
 .liste-card .cta-btn.gold{margin-top:6px;}
-.cta-btn.gold{background:#F4EEDA;color:#3B3A14;border-color:#F4EEDA;margin-top:24px;}
+.cta-btn.gold{background:#F4EEDA;color:#3B3A14;border-color:#F4EEDA;margin-top:24px;font-weight:600;font-size:.8rem;letter-spacing:.16em;}
 .cta-btn.gold:hover,.cta-btn.gold:focus-visible{background:transparent;color:#F7F0DB;border-color:#F4EEDA;}
 @media(max-width:820px){
   .liste-inner .cta-btn.gold{display:block;width:100%;text-align:center;}
