@@ -13,9 +13,16 @@
 .hero-foot{display:flex;flex-direction:column;align-items:center;}
 @media(max-width:760px){.hero{padding-top:clamp(96px,17vh,150px);}}
 
-/* logo du menu bien plus grand, sans agrandir le bandeau (marges de la barre réduites) */
+/* menu : logo agrandi (déborde légèrement, bandeau inchangé), titre plus gros/gras, liens colorés */
 .topnav .bar{padding-top:2px;padding-bottom:2px;}
-.brand .mono{width:54px;}
+.brand .mono{width:64px;margin-top:-5px;margin-bottom:-5px;}
+.brand b{font-size:.98rem;font-weight:700;letter-spacing:.14em;}
+.nav-links a{color:var(--text);}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--olive);background:color-mix(in srgb,var(--gold-line) 16%,transparent);}
+.topnav{transition:background .3s ease;}
+.topnav.scrolled{background:color-mix(in srgb,var(--bg) 72%,transparent);}
+/* adresse cliquable dans le déroulé (même couleur que le reste) */
+.addr-link{color:var(--text);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--gold-line);}
 
 /* ---- DA faire-part : fleur de lys comme separateur de titre ---- */
 h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;color:var(--gold-line);font-size:1.15rem;line-height:1;margin-top:14px;font-weight:400;}
@@ -77,18 +84,18 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 @media(max-width:680px){.lieu-gallery{grid-template-columns:1fr;max-width:360px;}}
 
 /* ---- Code vestimentaire (façon option 4) ---- */
-.attire{display:grid;grid-template-columns:1fr auto 1fr;align-items:start;gap:clamp(18px,4vw,44px);margin-top:32px;}
+.attire{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(18px,4vw,44px);margin-top:32px;}
 .attire article{text-align:center;}
 .attire article span{display:block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.5rem;}
 .attire article h4{font-family:var(--script);font-weight:400;font-size:clamp(1.8rem,4vw,2.5rem);color:var(--olive);line-height:1.05;margin:0;}
 .attire article p{margin:.5rem 0 0;color:var(--text-2);font-style:italic;}
-.attire-mono{width:clamp(72px,10vw,116px);align-self:center;}
+.attire-mono{width:clamp(96px,13vw,150px);align-self:center;}
 .attire-mono .mono{width:100%;height:auto;}
 @media(max-width:640px){
   .attire{grid-template-columns:1fr;gap:24px;}
   .attire-mono{order:0;margin:0 auto;}
 }
-.palette{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 18px;margin:clamp(28px,4vw,40px) auto 0;max-width:760px;}
+.palette{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 18px;margin:clamp(16px,2.4vw,26px) auto 0;max-width:760px;}
 .palette i{display:flex;flex-direction:column;align-items:center;gap:9px;width:72px;}
 .palette i::before{content:"";width:34px;height:34px;border-radius:50%;background:var(--c);border:1px solid rgba(0,0,0,.22);box-shadow:inset 0 0 0 2px rgba(255,255,255,.35);}
 .palette i span{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-2);}
@@ -98,11 +105,13 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .liste-band{background:var(--olive-block);color:#F4EEDA;}
 .liste-inner{width:min(1080px,100%);margin:0 auto;padding:clamp(48px,7vw,86px) 24px;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(26px,4vw,52px);align-items:center;}
 @media(max-width:820px){.liste-inner{grid-template-columns:1fr;}}
-.liste-card{text-align:left;}
+.liste-card{text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(16px,2.4vw,24px);}
 .liste-card .eyebrow.light{color:#E7C778;text-align:left;}
 .liste-card .title.light{color:#F7F0DB;text-align:left;}
 .liste-card .title.light::after{content:none;}
-.liste-card p{color:#E9E1C6;margin:2px 0 0;}
+.liste-card p{color:#E9E1C6;margin:0;}
+.liste-card .eyebrow.light{margin:0;}
+.liste-card .cta-btn.gold{margin-top:6px;}
 .cta-btn.gold{background:#F4EEDA;color:#3B3A14;border-color:#F4EEDA;margin-top:24px;}
 .cta-btn.gold:hover,.cta-btn.gold:focus-visible{background:transparent;color:#F7F0DB;border-color:#F4EEDA;}
 @media(max-width:820px){
