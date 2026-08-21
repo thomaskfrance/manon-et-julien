@@ -41,9 +41,9 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 /* ---- Decompte ---- */
 .countdown{display:inline-flex;align-items:flex-start;gap:clamp(14px,4vw,34px);margin-top:30px;}
 .countdown > div{display:flex;flex-direction:column;align-items:center;min-width:62px;}
-.countdown .cd-num{font-size:clamp(2.2rem,6vw,3.2rem);font-weight:700;color:var(--olive);line-height:1;font-variant-numeric:tabular-nums;}
-.countdown span{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--text-2);margin-top:9px;}
-.countdown .sep{color:var(--gold-line);font-size:1rem;height:clamp(2.2rem,6vw,3.2rem);display:inline-flex;align-items:center;}
+.countdown .cd-num{font-size:clamp(2.2rem,6vw,3.2rem);font-weight:700;color:var(--olive);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:0;margin:0;}
+.countdown .cd-lbl{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--text-2);margin-top:10px;margin-right:-.24em;}
+.countdown .sep{color:var(--gold-line);font-size:1rem;font-weight:400;height:clamp(2.2rem,6vw,3.2rem);display:inline-flex;align-items:center;letter-spacing:0;margin:0;}
 
 /* ---- Cadre delicat autour des photos (double filet olive + or) ---- */
 .framed{margin:0;}
