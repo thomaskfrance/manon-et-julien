@@ -35,7 +35,7 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 @font-face{font-family:'GreatVibes';src:url('/assets/fonts/GreatVibes.ttf') format('truetype');font-display:swap;}
 .amp{font-family:var(--serif);font-style:normal;font-weight:400;}
 .names .amp{display:inline-block;margin:0;font-size:.5em;vertical-align:.08em;color:var(--gold-line);}
-.hero .names .amp{color:var(--gold-line);}
+.hero .names .amp{color:var(--gold-line);font-style:italic;}
 
 /* ---- HERO : lignes de lieu ---- */
 .hero .names{padding:.06em 0 .12em;}
