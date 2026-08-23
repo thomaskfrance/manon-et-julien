@@ -39,11 +39,11 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 
 /* ---- HERO : lignes de lieu ---- */
 .hero-top{display:flex;flex-direction:column;align-items:center;}
-.hero-date{margin:6px 0 0;font-size:1rem;letter-spacing:.2em;text-transform:uppercase;color:#F6E7B8;font-weight:600;text-shadow:0 1px 6px rgba(0,0,0,.75);}
+.hero-date{margin:6px 0 0;font-size:1rem;letter-spacing:.2em;text-transform:uppercase;color:#FFFFFF;font-weight:600;text-shadow:0 1px 6px rgba(0,0,0,.75);}
 .hero .names{padding:.06em 0 .12em;}
 .venues{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 20px;margin:18px 0 0;}
 .venues > .v{display:flex;flex-direction:column;gap:3px;}
-.venues .lbl{font-size:.75rem;letter-spacing:.17em;text-transform:uppercase;color:#F6E7B8;font-weight:600;text-shadow:0 1px 5px rgba(0,0,0,.75);}
+.venues .lbl{font-size:.75rem;letter-spacing:.17em;text-transform:uppercase;color:#FFFFFF;font-weight:600;text-shadow:0 1px 5px rgba(0,0,0,.75);}
 .venues .date-v .lbl{color:#F6E7B8;}
 .venues .val,.venues .lys{font-size:1.05rem;line-height:1.25;}
 .venues .val{font-style:normal;color:#F6E7B8;text-shadow:0 1px 6px rgba(0,0,0,.7);}
