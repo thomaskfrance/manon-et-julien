@@ -128,7 +128,9 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .proximite{margin-top:clamp(48px,7vw,84px);}
 .stays{display:grid;grid-template-columns:1fr 1fr;gap:16px;width:min(760px,100%);margin:clamp(28px,4vw,40px) auto 0;text-align:left;}
 @media(max-width:640px){.stays{grid-template-columns:1fr;}}
-.stay{background:var(--surface);border:1px solid var(--line);padding:20px 22px;}
+.stay{background:var(--surface);border:1px solid var(--line);padding:0;overflow:hidden;}
+.stay-img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;}
+.stay-body{padding:18px 22px 20px;}
 .stay h4{margin:0 0 .45rem;font-size:1.12rem;font-weight:600;color:var(--olive);line-height:1.25;}
 .stay h4 span{color:var(--text-2);font-weight:400;}
 .stay p{margin:.12rem 0;color:var(--text);}
