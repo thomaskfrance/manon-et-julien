@@ -48,15 +48,16 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .venues .lys{display:flex;min-height:1.3125rem;align-items:center;justify-content:center;color:#FFFFFF;text-shadow:0 1px 5px rgba(0,0,0,.6);}
 @media(min-width:900px){
   .hero-foot{width:100%;}
-  .venues{display:grid;width:min(1100px,calc(100vw - 96px));grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:start;gap:clamp(32px,5vw,80px);}
+  .venues{display:grid;width:min(1100px,calc(100vw - 96px));grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"date date" "cer fest";align-items:start;column-gap:clamp(32px,5vw,80px);row-gap:22px;}
   .venues .lbl{font-size:1.18rem;}
   .venues .val,.venues .date-v .lys{font-size:1.12rem;}
   .venues .val{color:#F6E7B8;}
-  .venues .v:first-child{align-items:flex-start;text-align:left;}
-  .venues .date-v{align-items:center;text-align:center;justify-self:center;}
-  .venues .v:last-child{align-items:flex-end;text-align:right;}
+  .venues .v:first-child{grid-area:cer;align-items:flex-start;text-align:left;}
+  .venues .date-v{grid-area:date;align-items:center;text-align:center;}
+  .venues .v:last-child{grid-area:fest;align-items:flex-end;text-align:right;}
 }
 @media(max-width:560px){
+  .hero .names{white-space:nowrap;font-size:min(13.5vw,4.2rem);}
   .venues{flex-direction:column;gap:8px;}
   .venues .v{align-items:center;text-align:center;}
   .venues .date-v{order:-1;gap:0;margin-bottom:-6px;}
