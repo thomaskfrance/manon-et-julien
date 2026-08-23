@@ -60,7 +60,8 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
   .venues .v:last-child{align-items:flex-end;text-align:right;}
 }
 @media(max-width:560px){
-  .hero .names{white-space:nowrap;font-size:min(13.5vw,4.2rem);}
+  .hero{padding-left:18px;padding-right:18px;}
+  .hero .names{white-space:nowrap;font-size:min(14.5vw,4.6rem);}
   .venues{flex-direction:column;gap:8px;}
   .venues .v{align-items:center;text-align:center;}
   .venues .date-v{order:-1;gap:0;margin-bottom:-6px;}
