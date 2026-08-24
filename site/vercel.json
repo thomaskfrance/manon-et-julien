@@ -1,6 +1,9 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/optiona", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/option1", "destination": "/option1.html" },
     { "source": "/option2", "destination": "/option2.html" },
