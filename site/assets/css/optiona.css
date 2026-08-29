@@ -88,6 +88,8 @@ h2.title::after{content:"\269C\FE0E";width:auto;height:auto;background:none;colo
 .moment.split + .moment.split{margin-top:clamp(38px,6vw,64px);}
 .moment.split .moment-txt{min-width:0;}
 .moment.split h3{letter-spacing:.06em;}
+.moment.split.reverse .moment-txt{text-align:center;}
+.moment.split.reverse .moment-txt .faq{text-align:left;}
 .reception-prog{text-align:center;margin:1.5rem 0 .2rem;}
 .reception-prog .day-lbl{font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);font-weight:700;margin:0 0 .55rem;}
 .reception-prog .tags{justify-content:center;margin:.2rem 0 0;}
